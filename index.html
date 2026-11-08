@@ -1,0 +1,1436 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>사회정서역량 검사</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@400;700&display=swap">
+<style>
+:root{--bg:#F6F4FF;--bg2:#FFF;--bg3:#EEF0FF;--fg:#1C1B18;--fg2:#5A5750;--fg3:#9C998F;--border:#E0DDD5;--c1:#5B56AA;--c2:#2E86AB;--c3:#27AE60;--c4:#E07B3A;--c1bg:#ECEAF8;--c2bg:#E0F0F8;--c3bg:#DFF2E9;--c4bg:#FAEADE;--radius:12px;color-scheme:light}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#F6F4FF;--bg2:#FFF;--bg3:#EEF0FF;--fg:#1C1B18;--fg2:#5A5750;--fg3:#9C998F;--border:#E0DDD5;--c1bg:#ECEAF8;--c2bg:#E0F0F8;--c3bg:#DFF2E9;--c4bg:#FAEADE;color-scheme:light}}
+:root[data-theme="dark"]{--bg:#F6F4FF;--bg2:#FFF;--bg3:#EEF0FF;--fg:#1C1B18;--fg2:#5A5750;--fg3:#9C998F;--border:#E0DDD5;--c1bg:#ECEAF8;--c2bg:#E0F0F8;--c3bg:#DFF2E9;--c4bg:#FAEADE;color-scheme:light}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--fg);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg2);z-index:20}
+.app-header{background:var(--bg2);border-bottom:1px solid var(--border);position:sticky;top:env(safe-area-inset-top,0px);z-index:10;padding:12px max(20px,env(safe-area-inset-left,0px));display:flex;align-items:center;gap:10px}
+.hd{width:8px;height:8px;border-radius:50%;background:linear-gradient(135deg,var(--c1),var(--c4));flex-shrink:0}
+.ht{font-family:'Noto Serif KR',serif;font-size:.95rem;font-weight:700;flex:1}
+.hs{font-size:.72rem;color:var(--fg3)}
+.prog-wrap{height:3px;background:var(--border)}
+.prog-fill{height:100%;background:linear-gradient(90deg,var(--c1),var(--c2),var(--c3),var(--c4));transition:width .4s;width:0%}
+.mode-screen{max-width:600px;margin:0 auto;padding:48px 0 80px;display:flex;flex-direction:column;align-items:center;gap:16px}
+.mode-title{font-family:'Noto Serif KR',serif;font-size:1.4rem;font-weight:700;text-align:center;margin-bottom:8px}
+.mode-sub{font-size:.85rem;color:var(--fg2);text-align:center;margin-bottom:24px;line-height:1.6}
+.mode-btn{width:100%;background:var(--bg2);border:2px solid var(--border);border-radius:var(--radius);padding:20px 24px;display:flex;align-items:center;gap:16px;cursor:pointer;transition:border-color .2s,box-shadow .2s;text-align:left}
+.mode-btn:hover{border-color:var(--accent,var(--c1));box-shadow:0 2px 12px rgba(0,0,0,.08)}
+.mode-icon{font-size:1.6rem;flex-shrink:0}
+.mode-label{font-size:1rem;font-weight:700;color:var(--fg);display:block;margin-bottom:3px}
+.mode-desc{font-size:.8rem;color:var(--fg2);line-height:1.5}
+.container{max-width:680px;margin:0 auto;padding:28px 0 80px}
+.info-box{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin-bottom:24px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.info-box label{display:block;font-size:.72rem;font-weight:700;color:var(--fg2);letter-spacing:.04em;margin-bottom:5px}
+.info-box input,.info-box select{width:100%;border:1px solid var(--border);border-radius:8px;padding:8px 12px;font-family:inherit;font-size:.9rem;background:var(--bg);color:var(--fg);outline:none;transition:border-color .2s}
+.info-box input:focus,.info-box select:focus{border-color:var(--c1)}
+.guide-box{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:16px 20px;margin-bottom:24px;font-size:.82rem;line-height:1.7;color:var(--fg2)}
+.guide-box strong{color:var(--fg)}
+.q-card{background:var(--bg2);border:1.5px solid var(--border);border-radius:var(--radius);padding:14px 16px;margin-bottom:8px;transition:border-color .15s,background .15s}
+.q-card.done{border-color:var(--c1);background:var(--c1bg)}
+.q-top{display:flex;gap:10px;align-items:flex-start;margin-bottom:12px}
+.q-no{font-size:.68rem;font-weight:700;color:var(--c1);background:var(--c1bg);border-radius:50%;width:22px;height:22px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.q-text{font-size:.9rem;line-height:1.6;flex:1;padding-top:1px}
+.q-opts{display:grid;grid-template-columns:repeat(5,1fr);gap:5px}
+.q-opt{display:flex;flex-direction:column;align-items:center;gap:3px;cursor:pointer}
+.q-opt input{display:none}
+.q-circle{width:34px;height:34px;border-radius:50%;border:2px solid var(--border);background:var(--bg);display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:700;color:var(--fg2);transition:all .15s;cursor:pointer}
+.q-opt:hover .q-circle{border-color:var(--c1);color:var(--c1)}
+.q-opt input:checked+.q-circle{background:var(--c1);border-color:var(--c1);color:#fff;transform:scale(1.1)}
+.q-lbl{font-size:.58rem;color:var(--fg3);text-align:center;line-height:1.3;max-width:50px}
+.submit-area{margin-top:32px;text-align:center}
+.submit-btn{background:linear-gradient(135deg,var(--c1),var(--c2));color:#fff;border:none;border-radius:28px;padding:14px 48px;font-family:inherit;font-size:1rem;font-weight:700;cursor:pointer;box-shadow:0 4px 16px rgba(91,86,170,.3);transition:opacity .2s,transform .1s}
+.submit-btn:hover{opacity:.9;transform:translateY(-1px)}
+.ans-count{margin-top:10px;font-size:.8rem;color:var(--fg3)}
+.paper-input{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:24px;margin-bottom:16px}
+.paper-input h3{font-size:.95rem;font-weight:700;margin-bottom:16px}
+.domain-scores{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px}
+.ds-label{display:block;font-size:.75rem;font-weight:700;margin-bottom:6px}
+.ds-input-wrap{display:flex;align-items:center;gap:8px}
+.ds-input{width:80px;border:2px solid var(--border);border-radius:8px;padding:8px 12px;font-family:inherit;font-size:1rem;font-weight:700;background:var(--bg);color:var(--fg);outline:none;text-align:center;transition:border-color .2s}
+.ds-input:focus{border-color:var(--c1)}
+.ds-max{font-size:.8rem;color:var(--fg3)}
+.result-hd{text-align:center;margin-bottom:28px}
+.result-name{font-size:1.1rem;font-weight:700;margin-bottom:4px}
+.result-hd h2{font-family:'Noto Serif KR',serif;font-size:1.4rem;font-weight:700;margin-bottom:4px}
+.result-hd p{font-size:.82rem;color:var(--fg2)}
+.d-result{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:18px;margin-bottom:12px;display:flex;gap:14px;align-items:center}
+.dr-left{flex:1;min-width:0}
+.dr-name{font-weight:700;font-size:.9rem;margin-bottom:4px}
+.dr-level{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.04em;padding:2px 10px;border-radius:20px;color:#fff;margin-bottom:8px}
+.dr-bar-bg{height:7px;background:var(--border);border-radius:4px;overflow:hidden}
+.dr-bar{height:100%;border-radius:4px;transition:width .8s cubic-bezier(.4,0,.2,1)}
+.dr-score{font-family:'Noto Serif KR',serif;font-size:1.7rem;font-weight:700;flex-shrink:0;text-align:right;line-height:1.1}
+.dr-score span{display:block;font-size:.68rem;font-weight:400;color:var(--fg2);font-family:'Noto Sans KR',sans-serif}
+.total-card{background:var(--fg);color:var(--bg);border-radius:var(--radius);padding:24px;text-align:center;margin:20px 0}
+.total-card .tc-label{font-size:.78rem;opacity:.65;margin-bottom:4px}
+.total-card .tc-score{font-family:'Noto Serif KR',serif;font-size:2.6rem;font-weight:700;line-height:1}
+.total-card .tc-level{margin-top:6px;font-size:.88rem;opacity:.8}
+.compare-section{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin-bottom:14px}
+.compare-section h3{font-size:.95rem;font-weight:700;margin-bottom:16px}
+.compare-bar-row{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.cbar-label{font-size:.8rem;font-weight:700;width:70px;flex-shrink:0;color:var(--fg2)}
+.cbar-track{flex:1;display:flex;flex-direction:column;gap:5px}
+.cbar-line{display:flex;align-items:center;gap:6px}
+.cbar-tag{font-size:.62rem;color:var(--fg3);width:40px;text-align:right;flex-shrink:0}
+.cbar-bg{flex:1;height:10px;background:var(--border);border-radius:5px;overflow:hidden}
+.cbar-fill{height:100%;border-radius:5px;transition:width .8s}
+.cbar-val{font-size:.75rem;font-weight:700;width:30px;flex-shrink:0;font-variant-numeric:tabular-nums}
+/* 영역 해석 카드 */
+.domain-guide{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:18px;margin-bottom:10px}
+.dg-header{display:flex;align-items:center;gap:10px;margin-bottom:12px;cursor:pointer}
+.dg-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.dg-name{font-weight:700;font-size:.9rem;flex:1}
+.dg-score-badge{font-size:.75rem;font-weight:700;padding:3px 10px;border-radius:12px;color:#fff}
+.dg-arrow{font-size:.8rem;color:var(--fg3);transition:transform .2s}
+.dg-arrow.open{transform:rotate(180deg)}
+.dg-body{display:none;border-top:1px solid var(--border);padding-top:12px;margin-top:4px}
+.dg-body.open{display:block}
+.dg-level-label{font-size:.7rem;font-weight:700;letter-spacing:.04em;margin-bottom:6px}
+.dg-desc{font-size:.82rem;line-height:1.75;color:var(--fg2);margin-bottom:12px}
+.dg-tips h4{font-size:.78rem;font-weight:700;color:var(--fg);margin-bottom:6px}
+.dg-tips ul{padding-left:14px}
+.dg-tips li{font-size:.8rem;line-height:1.7;color:var(--fg2)}
+/* 교사 관찰 */
+.teacher-obs{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin-bottom:14px}
+.teacher-obs h3{font-size:.95rem;font-weight:700;margin-bottom:8px}
+.obs-tabs{display:flex;gap:4px;background:var(--bg3);border-radius:8px;padding:3px;margin-bottom:14px}
+.obs-tab{flex:1;padding:6px;border:none;border-radius:6px;font-family:inherit;font-size:.8rem;font-weight:700;cursor:pointer;background:transparent;color:var(--fg2);transition:all .15s}
+.obs-tab.active{background:var(--bg2);color:var(--fg);box-shadow:0 1px 3px rgba(0,0,0,.1)}
+.obs-domain{margin-bottom:14px}
+.obs-domain-name{font-size:.8rem;font-weight:700;margin-bottom:8px}
+.obs-item{margin-bottom:10px}
+.obs-item-text{font-size:.82rem;color:var(--fg2);margin-bottom:6px;line-height:1.5}
+.obs-opts{display:flex;gap:5px;flex-wrap:wrap}
+.obs-opt label{display:flex;align-items:center;gap:5px;cursor:pointer;border:1.5px solid var(--border);border-radius:20px;padding:4px 11px;font-size:.78rem;transition:all .15s}
+.obs-opt input{display:none}
+.obs-opt input:checked+label{color:#fff;border-color:transparent}
+.obs-memo{margin-top:10px;width:100%;border:1px solid var(--border);border-radius:8px;padding:8px 12px;font-family:inherit;font-size:.85rem;background:var(--bg);color:var(--fg);outline:none;resize:vertical;transition:border-color .2s}
+.obs-memo:focus{border-color:var(--c1)}
+.save-btn{width:100%;background:var(--c1);color:#fff;border:none;border-radius:var(--radius);padding:12px;font-family:inherit;font-size:.95rem;font-weight:700;cursor:pointer;transition:opacity .2s;margin-top:8px}
+.save-btn:hover{opacity:.88}
+.student-list{}
+.stu-item{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:14px 16px;margin-bottom:8px;display:flex;align-items:center;gap:12px;cursor:pointer;transition:border-color .15s}
+.stu-item:hover{border-color:var(--c1)}
+.stu-no{font-size:.72rem;color:var(--fg3);width:24px;text-align:center;flex-shrink:0}
+.stu-name{font-weight:700;font-size:.9rem;flex:1}
+.stu-class{font-size:.75rem;color:var(--fg2)}
+.stu-badge{font-size:.65rem;font-weight:700;padding:2px 8px;border-radius:10px;color:#fff}
+.stu-badges{display:flex;gap:5px}
+.stu-empty{text-align:center;padding:40px 0;color:var(--fg3);font-size:.88rem}
+.back-btn{background:transparent;border:none;padding:0;cursor:pointer;font-size:.85rem;color:var(--fg2);display:flex;align-items:center;gap:5px;margin-bottom:20px}
+.back-btn:hover{color:var(--fg)}
+.pw-box{max-width:360px;margin:80px auto;background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:32px;text-align:center}
+.pw-box h3{font-size:1rem;font-weight:700;margin-bottom:20px}
+.pw-input{width:100%;border:2px solid var(--border);border-radius:8px;padding:10px 14px;font-family:inherit;font-size:1.1rem;letter-spacing:.2em;background:var(--bg);color:var(--fg);outline:none;text-align:center;margin-bottom:12px;transition:border-color .2s}
+.pw-input:focus{border-color:var(--c1)}
+.pw-btn{width:100%;background:var(--c1);color:#fff;border:none;border-radius:8px;padding:10px;font-family:inherit;font-size:.95rem;font-weight:700;cursor:pointer}
+.pw-err{font-size:.8rem;color:var(--c4);margin-top:8px;min-height:1.2em}
+.tabs{display:flex;gap:4px;background:var(--bg3);border-radius:10px;padding:4px;margin-bottom:20px}
+.tab-btn{flex:1;padding:8px 4px;border:none;border-radius:7px;font-family:inherit;font-size:.82rem;font-weight:700;cursor:pointer;background:transparent;color:var(--fg2);transition:all .15s}
+.tab-btn.active{background:var(--bg2);color:var(--fg);box-shadow:0 1px 4px rgba(0,0,0,.1)}
+.reset-btn{display:block;width:100%;margin-top:24px;background:transparent;border:2px solid var(--border);border-radius:28px;padding:10px;font-family:inherit;font-size:.88rem;color:var(--fg2);cursor:pointer;transition:border-color .2s,color .2s}
+.reset-btn:hover{border-color:var(--c1);color:var(--c1)}
+@media(max-width:480px){.q-circle{width:30px;height:30px;font-size:.68rem}.q-lbl{font-size:.52rem;max-width:40px}.domain-scores{grid-template-columns:1fr}.d-result{flex-direction:column}.dr-score{text-align:left}}
+</style>
+
+<header class="app-header">
+  <div class="hd"></div>
+  <span class="ht">사회정서역량 검사</span>
+  <span class="hs" id="hSub">3~4학년용</span>
+</header>
+<div class="prog-wrap"><div class="prog-fill" id="prog"></div></div>
+
+<!-- 역할 선택 (맨 처음) -->
+<div id="scRole">
+<div class="mode-screen" style="padding:0 0 80px;gap:0">
+  <!-- 히어로 배너 (밝고 화사하게) -->
+  <div style="width:100%;background:linear-gradient(150deg,#A8EDEA 0%,#B8D8F8 40%,#D4B8F8 70%,#FFD6E8 100%);border-radius:0 0 32px 32px;padding:44px 24px 40px;text-align:center;margin-bottom:24px;position:relative;overflow:hidden">
+    <div style="position:absolute;top:-40px;left:-40px;width:160px;height:160px;border-radius:50%;background:rgba(255,255,255,.25)"></div>
+    <div style="position:absolute;bottom:-30px;right:-30px;width:120px;height:120px;border-radius:50%;background:rgba(255,255,255,.2)"></div>
+    <div style="position:absolute;top:20px;right:30px;width:60px;height:60px;border-radius:50%;background:rgba(255,255,255,.18)"></div>
+    <div style="font-size:3rem;margin-bottom:12px;filter:drop-shadow(0 2px 6px rgba(0,0,0,.12))">🌱</div>
+    <div style="font-family:'Noto Serif KR',serif;font-size:1.6rem;font-weight:700;color:#3A3060;margin-bottom:6px;text-shadow:0 1px 3px rgba(255,255,255,.6)">사회정서역량 검사</div>
+    <div style="font-size:.88rem;color:#5A5080;margin-bottom:20px;font-weight:500">초등 3~4학년용</div>
+    <!-- 근거 뱃지 -->
+    <div style="display:inline-flex;flex-wrap:wrap;gap:6px;justify-content:center">
+      <span style="background:rgba(255,255,255,.65);border:1px solid rgba(255,255,255,.8);border-radius:20px;padding:5px 13px;font-size:.72rem;color:#4A3A80;font-weight:600;backdrop-filter:blur(8px)">📚 한국형 사회정서교육 교육과정 기반</span>
+      <span style="background:rgba(255,255,255,.65);border:1px solid rgba(255,255,255,.8);border-radius:20px;padding:5px 13px;font-size:.72rem;color:#4A3A80;font-weight:600;backdrop-filter:blur(8px)">🔬 한국교육과정평가원(KICE, 2024)</span>
+    </div>
+  </div>
+
+  <!-- 소개 카드 -->
+  <div style="width:100%;background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:18px 20px;margin-bottom:20px;box-shadow:0 2px 12px rgba(0,0,0,.05)">
+    <div style="font-size:.78rem;font-weight:700;color:var(--c1);letter-spacing:.06em;margin-bottom:8px">📋 이 검사는</div>
+    <p style="font-size:.84rem;line-height:1.8;color:var(--fg2);margin:0">
+      초등학교 3~4학년 학생의 <strong style="color:var(--fg)">사회정서역량</strong>을 4개 영역으로 측정하는 도구예요.<br>
+      한국형 사회정서교육 교육과정의 성취기준·내용체계와 <strong style="color:var(--fg)">한국교육과정평가원 사회정서역량 검사도구(KICE, 2024)</strong>를 근거로 마음빛이음 교사연구회가 개발하였습니다.<br><span style="font-size:.77rem;color:var(--fg3);margin-top:4px;display:block">※ 표준화·신뢰도 검증이 이루어지지 않은 교육적 참고도구입니다. 점수만으로 학생을 평가하지 말고, 교육적 지원 방향 설정의 참고자료로 활용해 주세요.</span>
+    </p>
+  </div>
+
+  <!-- 도메인 아이콘 행 (간결하게) -->
+  <div style="width:100%;display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:24px">
+    <div style="background:var(--c1bg);border-radius:12px;padding:12px 6px;text-align:center">
+      <div style="font-size:1.3rem;margin-bottom:4px">🧠</div>
+      <div style="font-size:.68rem;font-weight:700;color:var(--c1);line-height:1.3">자기인식<br>·관리</div>
+    </div>
+    <div style="background:var(--c2bg);border-radius:12px;padding:12px 6px;text-align:center">
+      <div style="font-size:1.3rem;margin-bottom:4px">🤝</div>
+      <div style="font-size:.68rem;font-weight:700;color:var(--c2);line-height:1.3">소통<br>·협력</div>
+    </div>
+    <div style="background:var(--c3bg);border-radius:12px;padding:12px 6px;text-align:center">
+      <div style="font-size:1.3rem;margin-bottom:4px">⭐</div>
+      <div style="font-size:.68rem;font-weight:700;color:var(--c3);line-height:1.3">책임</div>
+    </div>
+    <div style="background:var(--c4bg);border-radius:12px;padding:12px 6px;text-align:center">
+      <div style="font-size:1.3rem;margin-bottom:4px">💛</div>
+      <div style="font-size:.68rem;font-weight:700;color:var(--c4);line-height:1.3">마음<br>돌봄</div>
+    </div>
+  </div>
+
+  <!-- 역할 선택 버튼 -->
+  <div style="width:100%;font-size:.78rem;font-weight:700;color:var(--fg2);letter-spacing:.05em;margin-bottom:10px">나는 누구인가요?</div>
+  <button class="mode-btn" style="--accent:var(--c1);margin-bottom:10px" onclick="goRoleStudent()">
+    <span class="mode-icon">🧒</span>
+    <span><span class="mode-label">학생이에요</span><span class="mode-desc">선생님께 받은 학교 코드로 입장해요.</span></span>
+  </button>
+  <button class="mode-btn" style="--accent:var(--c2)" onclick="goRoleTeacher()">
+    <span class="mode-icon">👩‍🏫</span>
+    <span><span class="mode-label">선생님이에요</span><span class="mode-desc">학교 코드와 비밀번호로 관리자 화면에 들어가요.</span></span>
+  </button>
+
+  <!-- 하단 연구회 표기 -->
+  <div style="margin-top:28px;text-align:center;padding-top:20px;border-top:1px solid var(--border);width:100%">
+    <div style="display:inline-flex;align-items:center;gap:8px">
+      <div style="width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,var(--c1),var(--c4));display:flex;align-items:center;justify-content:center;font-size:.8rem">✨</div>
+      <div>
+        <div style="font-size:.78rem;font-weight:700;color:var(--fg)">마음빛이음 교사연구회</div>
+
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- 학생: 학교 코드 입력 -->
+<div id="scStudentCode" hidden>
+<div class="mode-screen">
+  <button class="back-btn" onclick="show('scRole')">← 처음으로</button>
+  <div class="mode-title" style="margin-bottom:4px">학교 코드 입력</div>
+  <p class="mode-sub">선생님께 받은 학교 코드를 입력해 주세요.</p>
+  <div style="width:100%;background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:24px">
+    <label style="display:block;font-size:.75rem;font-weight:700;color:var(--fg2);margin-bottom:8px">학교 코드</label>
+    <input id="stuCodeInput" class="pw-input" style="margin-bottom:12px;letter-spacing:.15em" placeholder="예) A3F7K2" maxlength="10"
+      onkeydown="if(event.key==='Enter')enterStudentCode()">
+    <button class="pw-btn" onclick="enterStudentCode()">입장하기</button>
+    <div class="pw-err" id="stuCodeErr"></div>
+    <p style="font-size:.72rem;color:var(--fg3);margin-top:12px;line-height:1.6">6자리 코드를 모르면 선생님께 여쭤보세요.<br>대소문자 구분 없이 입력해도 돼요.</p>
+  </div>
+</div>
+</div>
+
+<!-- 학생 모드 선택 (자가보고 or 서면입력) -->
+<div id="scMode" hidden>
+<div class="mode-screen">
+  <div class="mode-title" id="modeSchoolName">사회정서역량 검사</div>
+  <p class="mode-sub" id="modeSub" style="margin-bottom:24px"></p>
+  <button class="mode-btn" style="--accent:var(--c1)" onclick="goStudent()">
+    <span class="mode-icon">✏️</span>
+    <span><span class="mode-label">온라인 자기진단 검사</span><span class="mode-desc">화면에서 직접 체크해요. (32문항)</span></span>
+  </button>
+  <button class="mode-btn" style="--accent:var(--c3)" onclick="goPaperInput()">
+    <span class="mode-icon">📝</span>
+    <span><span class="mode-label">서면 검사 결과 입력</span><span class="mode-desc">종이 검사지로 한 결과를 여기에 기록해요.</span></span>
+  </button>
+  <button style="font-size:.75rem;color:var(--fg3);background:none;border:none;cursor:pointer;margin-top:8px" onclick="show('scStudentCode')">다른 코드로 변경</button>
+</div>
+</div>
+
+<!-- 교사: 학교 코드 + 역할 + 비밀번호 -->
+<div id="scTeacherCode" hidden>
+<button class="back-btn" style="margin:16px max(20px,env(safe-area-inset-left,0px)) 0" onclick="show('scRole')">← 처음으로</button>
+<div class="pw-box">
+  <h3>👩‍🏫 교사 로그인</h3>
+  <label style="display:block;font-size:.72rem;font-weight:700;color:var(--fg2);margin-bottom:6px;text-align:left">학교 코드</label>
+  <input class="pw-input" id="tchCodeInput" style="letter-spacing:.15em;margin-bottom:10px" placeholder="코드가 있으면 입력, 없으면 비워두세요" maxlength="10"
+    onkeydown="if(event.key==='Enter')document.getElementById('tchPwInput').focus()">
+  <label style="display:block;font-size:.72rem;font-weight:700;color:var(--fg2);margin-bottom:8px;text-align:left">역할 선택</label>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px">
+    <label style="display:flex;align-items:center;gap:8px;padding:12px;border:2px solid var(--border);border-radius:10px;cursor:pointer;transition:border-color .2s" id="roleCardHomeroom">
+      <input type="radio" name="tchRole" value="homeroom" onchange="updateRoleUI()" style="display:none">
+      <span style="font-size:1.3rem">🏫</span>
+      <span style="font-size:.85rem;font-weight:700">학급담임</span>
+    </label>
+    <label style="display:flex;align-items:center;gap:8px;padding:12px;border:2px solid var(--border);border-radius:10px;cursor:pointer;transition:border-color .2s" id="roleCardAdmin">
+      <input type="radio" name="tchRole" value="admin" onchange="updateRoleUI()" style="display:none">
+      <span style="font-size:1.3rem">📋</span>
+      <span style="font-size:.85rem;font-weight:700">업무담당</span>
+    </label>
+  </div>
+  <div id="classInputWrap" hidden style="margin-bottom:10px">
+    <label style="display:block;font-size:.72rem;font-weight:700;color:var(--fg2);margin-bottom:6px;text-align:left">담당 학년·반</label>
+    <input class="pw-input" id="tchClassInput" placeholder="예) 3학년 2반" style="margin-bottom:0">
+  </div>
+  <label style="display:block;font-size:.72rem;font-weight:700;color:var(--fg2);margin-bottom:6px;text-align:left">비밀번호</label>
+  <input class="pw-input" type="password" id="tchPwInput" placeholder="••••" maxlength="20"
+    onkeydown="if(event.key==='Enter')checkTeacherLogin()">
+  <button class="pw-btn" onclick="checkTeacherLogin()" style="margin-top:4px">로그인</button>
+  <div class="pw-err" id="tchErr"></div>
+  <p style="font-size:.72rem;color:var(--fg3);margin-top:12px;line-height:1.6">처음이라면 코드 비워두고 로그인 → 학교 등록 후 코드 발급<br>기본 비밀번호(담임/업무 공통): <strong>1234</strong></p>
+</div>
+</div>
+
+<!-- 학생 온라인 검사 -->
+<div id="scStudent" hidden>
+<div class="container">
+  <button class="back-btn" onclick="show('scMode')">← 처음으로</button>
+  <div class="guide-box"><strong>검사 안내</strong><br>각 문항을 읽고 나에게 가장 알맞은 번호에 체크해 주세요. 맞고 틀린 답이 없으니 솔직하게 답해 주세요.</div>
+  <div class="info-box">
+    <div><label>학교</label><input id="sSchool" placeholder="예) ○○초등학교"></div>
+    <div><label>학년·반</label><input id="sClass" placeholder="예) 3학년 2반"></div>
+    <div><label>이름</label><input id="sName" placeholder="이름"></div>
+    <div><label>검사일</label><input type="date" id="sDate"></div>
+  </div>
+  <div id="qArea"></div>
+  <div class="submit-area">
+    <button class="submit-btn" onclick="submitSurvey()">결과 보기 →</button>
+    <div class="ans-count" id="ansCount">0 / 32 문항 응답됨</div>
+  </div>
+</div>
+</div>
+
+<!-- 서면 입력 -->
+<div id="scPaper" hidden>
+<div class="container">
+  <button class="back-btn" onclick="show('scMode')">← 처음으로</button>
+  <div class="info-box">
+    <div><label>학교</label><input id="pSchool" placeholder="예) ○○초등학교"></div>
+    <div><label>학년·반</label><input id="pClass" placeholder="예) 3학년 2반"></div>
+    <div><label>이름</label><input id="pName" placeholder="이름"></div>
+    <div><label>검사일</label><input type="date" id="pDate"></div>
+  </div>
+  <div class="paper-input">
+    <h3>영역별 점수 입력 (각 40점 만점)</h3>
+    <div class="domain-scores">
+      <div><label class="ds-label" style="color:var(--c1)">자기인식·관리</label><div class="ds-input-wrap"><input class="ds-input" id="p1" type="number" min="8" max="40" placeholder="0"><span class="ds-max">/ 40점</span></div></div>
+      <div><label class="ds-label" style="color:var(--c2)">소통·협력</label><div class="ds-input-wrap"><input class="ds-input" id="p2" type="number" min="8" max="40" placeholder="0"><span class="ds-max">/ 40점</span></div></div>
+      <div><label class="ds-label" style="color:var(--c3)">책임</label><div class="ds-input-wrap"><input class="ds-input" id="p3" type="number" min="8" max="40" placeholder="0"><span class="ds-max">/ 40점</span></div></div>
+      <div><label class="ds-label" style="color:var(--c4)">마음돌봄</label><div class="ds-input-wrap"><input class="ds-input" id="p4" type="number" min="8" max="40" placeholder="0"><span class="ds-max">/ 40점</span></div></div>
+    </div>
+    <button class="save-btn" onclick="submitPaper()">기록 저장 →</button>
+  </div>
+</div>
+</div>
+
+<!-- 결과 화면 -->
+<div id="scResult" hidden>
+<div class="container">
+  <button class="back-btn" id="resultBack" onclick="show('scMode')">← 처음으로</button>
+  <div class="result-hd">
+    <div class="result-name" id="rName"></div>
+    <h2>사회정서역량 결과</h2>
+    <p id="rDate"></p>
+  </div>
+  <div id="dResults"></div>
+  <div class="total-card" id="totalCard"></div>
+  <div id="stuDomainGuide"></div>
+  <button class="reset-btn" id="retakeBtn" onclick="goStudent()">↩ 다시 검사하기</button>
+</div>
+</div>
+
+
+<!-- 교사 목록 -->
+<div id="scTeacher" hidden>
+<div class="container">
+  <button class="back-btn" onclick="show('scRole')">← 처음으로</button>
+  <!-- 메인 탭: 목록 / 점수요약 / 설정 -->
+  <div class="tabs" style="margin-bottom:0">
+    <button class="tab-btn active" id="mainTabList" onclick="switchMainTab('list')">📋 목록</button>
+    <button class="tab-btn" id="mainTabSummary" onclick="switchMainTab('summary')">📊 점수요약</button>
+    <button class="tab-btn" id="mainTabSettings" onclick="switchMainTab('settings')">⚙️ 설정</button>
+  </div>
+
+  <!-- 목록 탭 -->
+  <div id="mainPanelList">
+    <div class="tabs" style="margin-top:8px">
+      <button class="tab-btn active" id="tabAll" onclick="filterStudents('all')">전체</button>
+      <button class="tab-btn" id="tabOnline" onclick="filterStudents('online')">온라인</button>
+      <button class="tab-btn" id="tabPaper" onclick="filterStudents('paper')">서면</button>
+      <button class="tab-btn" id="tabTeacherOnly" onclick="filterStudents('teacherOnly')">교사등록</button>
+    </div>
+    <!-- 업무담당 전용: 학급 필터 + 검색 -->
+    <div id="adminFilterBox" style="display:none;margin-top:10px;gap:8px;flex-wrap:wrap">
+      <div style="display:flex;align-items:center;gap:6px;flex:1;min-width:140px">
+        <span style="font-size:.75rem;color:var(--fg2);white-space:nowrap">학급</span>
+        <select id="classFilter" onchange="renderStudents()" style="flex:1;padding:7px 10px;border:1px solid var(--border);border-radius:8px;background:var(--bg2);color:var(--fg);font-size:.82rem">
+          <option value="">전체 학급</option>
+        </select>
+      </div>
+      <div style="display:flex;align-items:center;gap:6px;flex:1;min-width:140px">
+        <span style="font-size:.75rem;color:var(--fg2);white-space:nowrap">검색</span>
+        <input id="nameSearch" type="text" placeholder="이름 검색…" oninput="renderStudents()" style="flex:1;padding:7px 10px;border:1px solid var(--border);border-radius:8px;background:var(--bg2);color:var(--fg);font-size:.82rem">
+      </div>
+    </div>
+    <div style="display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap;margin-top:12px">
+      <button class="save-btn" style="flex:1;background:var(--bg2);color:var(--c1);border:2px solid var(--c1)" onclick="showAddStudent()">+ 학생 직접 등록</button>
+      <button class="save-btn" style="flex:1;background:var(--bg2);color:var(--c4);border:2px solid var(--c4)" onclick="resetSchoolData()">🗑 데이터 초기화</button>
+    </div>
+    <div id="stuList"></div>
+  </div>
+
+  <!-- 점수요약 탭 -->
+  <div id="mainPanelSummary" hidden>
+    <div style="margin:12px 0 8px;display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+      <span style="font-size:.8rem;color:var(--fg2)">보기:</span>
+      <button class="tab-btn active" id="summTabSelf" onclick="switchSummTab('self')" style="padding:5px 12px;font-size:.78rem">학생 자가보고</button>
+      <button class="tab-btn" id="summTabObs" onclick="switchSummTab('obs')" style="padding:5px 12px;font-size:.78rem">교사 관찰</button>
+    </div>
+    <div id="summaryTable" style="overflow-x:auto"></div>
+  </div>
+
+  <!-- 설정 탭 -->
+  <div id="mainPanelSettings" hidden>
+    <div style="margin-top:16px;background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:20px">
+      <div style="font-weight:700;margin-bottom:16px;font-size:.95rem">🔑 비밀번호 변경</div>
+      <label style="display:block;font-size:.72rem;font-weight:700;color:var(--fg2);margin-bottom:6px">변경할 비밀번호 종류</label>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px">
+        <label style="display:flex;align-items:center;gap:6px;padding:10px;border:2px solid var(--border);border-radius:8px;cursor:pointer" id="pwChangeCardHomeroom">
+          <input type="radio" name="pwChangeType" value="homeroom" onchange="document.getElementById('pwChangeCardHomeroom').style.borderColor='var(--c1)';document.getElementById('pwChangeCardAdmin').style.borderColor='var(--border)'">
+          <span style="font-size:.85rem">🏫 담임 비밀번호</span>
+        </label>
+        <label style="display:flex;align-items:center;gap:6px;padding:10px;border:2px solid var(--border);border-radius:8px;cursor:pointer" id="pwChangeCardAdmin">
+          <input type="radio" name="pwChangeType" value="admin" onchange="document.getElementById('pwChangeCardAdmin').style.borderColor='var(--c1)';document.getElementById('pwChangeCardHomeroom').style.borderColor='var(--border)'">
+          <span style="font-size:.85rem">📋 업무 비밀번호</span>
+        </label>
+      </div>
+      <label style="display:block;font-size:.72rem;font-weight:700;color:var(--fg2);margin-bottom:6px">현재 비밀번호</label>
+      <input class="pw-input" type="password" id="pwOld" placeholder="현재 비밀번호" style="margin-bottom:10px">
+      <label style="display:block;font-size:.72rem;font-weight:700;color:var(--fg2);margin-bottom:6px">새 비밀번호</label>
+      <input class="pw-input" type="password" id="pwNew1" placeholder="새 비밀번호" style="margin-bottom:10px">
+      <label style="display:block;font-size:.72rem;font-weight:700;color:var(--fg2);margin-bottom:6px">새 비밀번호 확인</label>
+      <input class="pw-input" type="password" id="pwNew2" placeholder="새 비밀번호 확인" style="margin-bottom:10px">
+      <button class="pw-btn" onclick="changePw()">비밀번호 변경</button>
+      <div class="pw-err" id="pwChangeErr" style="margin-top:8px"></div>
+    </div>
+    <div id="roleInfoBox" style="margin-top:12px;background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:16px;font-size:.82rem;color:var(--fg2);line-height:1.7"></div>
+    <div style="margin-top:12px;background:var(--bg2);border:2px solid var(--c4);border-radius:var(--radius);padding:20px">
+      <div style="font-weight:700;color:var(--c4);margin-bottom:8px;font-size:.95rem">⚠️ 위험 구역</div>
+      <p style="font-size:.8rem;color:var(--fg2);margin-bottom:12px;line-height:1.6">학교 코드와 모든 학생 데이터를 영구 삭제합니다.<br>시범 운영 후 초기화할 때 사용하세요.</p>
+      <button class="save-btn" style="background:var(--bg2);color:var(--c4);border:2px solid var(--c4);width:100%" onclick="deleteSchoolCode()">🗑 학교 코드 및 전체 데이터 삭제</button>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- 학생 직접 등록 -->
+<div id="scAddStudent" hidden>
+<div class="container">
+  <button class="back-btn" onclick="showTeacher()">← 목록으로</button>
+  <div style="font-family:'Noto Serif KR',serif;font-size:1.2rem;font-weight:700;margin-bottom:20px">학생 등록</div>
+  <div class="guide-box">학생 자가보고 없이 교사가 먼저 학생을 등록하고 관찰을 입력할 수 있어요.<br>나중에 학생이 같은 이름으로 자가보고를 하면 연결됩니다.</div>
+  <div class="info-box">
+    <div><label>학년·반</label><input id="addClass" placeholder="예) 3학년 2반"></div>
+    <div><label>이름</label><input id="addName" placeholder="이름"></div>
+    <div><label>성별 (선택)</label>
+      <select id="addGender"><option value="">-</option><option value="남">남</option><option value="여">여</option></select>
+    </div>
+    <div><label>등록일</label><input type="date" id="addDate"></div>
+  </div>
+  <button class="save-btn" onclick="registerStudent()">등록하기</button>
+</div>
+</div>
+
+<!-- 교사 상세 -->
+<div id="scDetail" hidden>
+<div class="container">
+  <button class="back-btn" onclick="showTeacher()">← 목록으로</button>
+  <div class="result-hd">
+    <div class="result-name" id="detName"></div>
+    <h2>역량 비교 & 지도 가이드</h2>
+    <p id="detDate"></p>
+  </div>
+  <div class="compare-section">
+    <h3>📊 학생 자기보고 vs 교사 관찰 비교</h3>
+    <div id="compareChart"></div>
+  </div>
+  <div id="domainGuides"></div>
+  <div id="obsGuides" style="display:none"></div>
+  <div class="teacher-obs">
+    <h3>✏️ 교사 관찰 체크</h3>
+    <div class="obs-tabs">
+      <button class="obs-tab active" id="obsTab16" onclick="switchObsMode(16)">간이용 (16문항)</button>
+      <button class="obs-tab" id="obsTab32" onclick="switchObsMode(32)">심층용 (32문항)</button>
+    </div>
+    <div id="obsItems"></div>
+    <div>
+      <label class="ds-label" style="margin-top:16px;display:block">메모 / 지원 계획</label>
+      <textarea class="obs-memo" id="obsMemo" rows="3" placeholder="관찰 내용이나 지원 계획을 자유롭게 기록해 주세요."></textarea>
+    </div>
+    <button class="save-btn" onclick="saveObs()">관찰 저장 ✓</button>
+  </div>
+</div>
+</div>
+
+<script>
+const DOMAINS=[
+  {key:'d1',name:'자기인식·관리',color:'var(--c1)',bg:'var(--c1bg)'},
+  {key:'d2',name:'소통·협력',color:'var(--c2)',bg:'var(--c2bg)'},
+  {key:'d3',name:'책임',color:'var(--c3)',bg:'var(--c3bg)'},
+  {key:'d4',name:'마음돌봄',color:'var(--c4)',bg:'var(--c4bg)'},
+];
+
+// 영역별 수준별 설명 + 지도팁
+const DOMAIN_GUIDE = [
+  {
+    high:{
+      desc:'자신의 감정과 강점을 잘 알아차리고, 충동이나 감정을 스스로 조절하며, 목표를 세워 실천하는 능력이 발달해 있습니다. 어려운 상황에서도 자기 자신을 믿고 행동하려는 모습이 보입니다.',
+      tips:['더 복잡한 감정(복합 감정, 자기비판 등)을 탐색하는 활동 제공','장기 목표 설정과 중간 점검 습관 형성 돕기','리더십 역할이나 멘토 역할 경험 제공']
+    },
+    mid:{
+      desc:'기본적인 감정 인식과 조절 능력은 갖추고 있으나, 특정 상황(갈등, 스트레스)에서 조절이 어렵거나 목표 실천이 흔들리는 경우가 있습니다.',
+      tips:['감정 카드, 감정 일기 등 감정 어휘 확장 활동','충동 조절 전략(멈추기–생각하기–행동하기) 반복 연습','작은 목표 세우기와 성공 경험 쌓기 지원']
+    },
+    low:{
+      desc:'자신의 감정을 알아차리거나 이름 붙이는 것을 어려워하며, 충동적인 반응이 잦거나 목표를 세우고 유지하는 데 어려움이 있습니다. 지속적인 관심과 직접적인 지도가 필요합니다.',
+      tips:['간단한 감정 카드(기쁨/슬픔/화남/걱정 4가지)로 하루 감정 체크인','호흡법·신체 이완 등 쉬운 조절 전략부터 개별 연습','단기 성취 가능한 소목표 제시, 성공 시 즉각 긍정 피드백','개별 상담 또는 Wee클래스 연계 검토']
+    }
+  },
+  {
+    high:{
+      desc:'친구의 말을 경청하고 공감하는 능력이 뛰어나며, 자신의 생각을 적절하게 표현하고 다른 의견을 존중합니다. 갈등 상황에서도 대화로 해결하려는 성숙한 태도를 보입니다.',
+      tips:['토론·협상 기술 등 고급 소통 역량으로 확장','다양한 관점을 경험하는 역할극·협동 프로젝트 참여','또래 중재자 역할 경험 제공']
+    },
+    mid:{
+      desc:'친구와 대화하고 협력하는 기본 능력은 갖추고 있으나, 의견 충돌 상황에서 감정이 앞서거나 자기주장이 지나치게 강해지는 경우가 있습니다.',
+      tips:['나-전달법(I-message) 연습: "나는 ~할 때 ~했어"','갈등 해결 5단계(멈추기–표현–듣기–해결책 찾기–확인) 반복 연습','협동 활동에서 역할 분담과 의사결정 과정 명시']
+    },
+    low:{
+      desc:'또래와의 의사소통에서 어려움이 자주 관찰됩니다. 경청보다 자기 말하기에 집중하거나, 거꾸로 지나치게 위축되어 의견 표현을 피하는 경향이 있습니다.',
+      tips:['짝 활동부터 시작해 소규모 집단으로 단계적 확장','경청 연습: 상대방 말 한 문장 반복하기 훈련','역할극으로 감정 표현과 경청 체험','개별 사회적 기술 훈련 또는 집단 상담 프로그램 연계']
+    }
+  },
+  {
+    high:{
+      desc:'약속과 규칙을 스스로 지키고, 맡은 일을 자발적으로 처리하며, 자신의 행동 결과를 책임지려는 태도가 명확합니다. 공동체를 위해 솔선수범하는 모습도 보입니다.',
+      tips:['더 넓은 범위의 사회적 책임(환경, 나눔)으로 확장','리더십 역할이나 학급 프로젝트 주도 기회 제공','장기적 결과를 고려한 도덕적 의사결정 활동']
+    },
+    mid:{
+      desc:'기본 규칙 준수와 과제 수행은 하고 있으나, 감시가 없을 때나 어려운 과제 앞에서 자기관리가 흔들리거나 결과 책임을 회피하는 경우가 있습니다.',
+      tips:['자기 약속 카드 만들기 (본인이 작성·서명)','실수를 인정하고 바로잡는 연습: "내가 잘못했어, 그래서 이렇게 고칠게"','공동 목표가 있는 모둠 프로젝트로 책임감 경험']
+    },
+    low:{
+      desc:'규칙 준수나 역할 수행에 일관성이 부족하고, 결과를 타인 탓으로 돌리거나 맡은 일을 자주 미루는 경향이 있습니다. 행동과 결과의 연결을 직접적으로 경험할 기회가 필요합니다.',
+      tips:['매우 단순한 역할(예: 창문닫기 담당)부터 성공 경험 반복','행동–결과 연결 그래픽 오거나이저 활용(내가 한 것 → 결과)','규칙 위반 시 자연적 결과를 경험하게 하는 학급 운영','개별 목표 계약서(교사-학생 서명) 적용']
+    }
+  },
+  {
+    high:{
+      desc:'자신의 감정을 받아들이고 어려움에서 회복하는 능력이 뛰어납니다. 자기 자신을 소중히 여기며, 힘들 때 도움을 요청하고 타인을 위로하는 역량도 발달해 있습니다.',
+      tips:['감사 일기, 강점 인식 활동으로 긍정 심리 더 강화','자기 돌봄 루틴을 의식적으로 설계하도록 지원','또래 상담 또는 멘토 역할 경험 제공']
+    },
+    mid:{
+      desc:'기본적인 정서 회복력을 갖추고 있으나, 큰 스트레스나 반복적인 실패 상황에서 자기효능감이 흔들리거나 도움 요청을 꺼리는 경향이 있습니다.',
+      tips:['자기 위로 말 연습: "이럴 수도 있어, 괜찮아"','스트레스 대처 방법 목록 만들기(학생이 직접 작성)','신뢰 가능한 어른·친구에게 도움 요청하는 방법 연습']
+    },
+    low:{
+      desc:'부정적 감정을 받아들이기 어려워하거나, 자기효능감이 낮고 쉽게 포기하는 모습이 보입니다. 힘들어도 도움을 요청하지 않거나, 주변 친구에게 무관심한 경향이 있습니다.',
+      tips:['매일 1가지 "오늘 잘한 것" 찾기로 긍정 자기인식 훈련','실패 상황에서 작은 성공 경험 의도적으로 설계','힘들 때 선생님·부모님에게 말하는 연습, 도움 요청을 용기 있는 행동으로 프레이밍','정서적 지지를 위한 개별 상담, 필요시 외부 전문기관 연계']
+    }
+  }
+];
+
+const ITEMS=[
+  '나는 내가 잘하는 것과 잘 못하는 것을 알고 있다.',
+  '나는 내가 소중하게 생각하는 것이 무엇인지 알고 있다.',
+  '나는 내 감정에 이름을 붙이고 말할 수 있다. (예: 기쁨, 슬픔, 화남, 걱정)',
+  '나는 내가 화가 나거나 속상할 때 그 마음을 알아차린다.',
+  '나는 화가 날 때 마음을 가라앉히는 방법을 사용한다. (예: 깊게 숨 쉬기, 잠시 자리 피하기)',
+  '나는 화가 나도 친구에게 상처 주는 말이나 행동을 참으려 노력한다.',
+  '나는 이루고 싶은 목표가 있으면 무엇을 할지 계획을 세운다.',
+  '나는 내가 세운 계획대로 잘 되고 있는지 중간에 확인한다.',
+  '나는 친구가 말할 때 끝까지 귀 기울여 듣는다.',
+  '나는 친구의 마음을 이해하려고 노력한다.',
+  '나는 내 생각과 감정을 친구들에게 적절하게 표현한다.',
+  '나는 친구와 생각이 달라도 친구의 생각을 존중한다.',
+  '나는 친구와 다투었을 때 서로의 이야기를 듣고 해결 방법을 찾으려 한다.',
+  '나는 나와 다른 점(생김새, 말투, 생각, 생활 방식 등)이 있는 친구도 존중한다.',
+  '나는 모둠 활동에서 역할을 나누어 함께 활동한다.',
+  '나는 모둠이나 학급 활동에서 친구들과 의견을 나누며 함께 결정한다.',
+  '나는 다른 사람과 한 약속을 지키려 한다.',
+  '나는 학급에서 정한 규칙을 스스로 지키려 한다.',
+  '나는 행동하기 전에 그 행동이 나와 다른 사람에게 어떤 영향을 줄지 생각한다.',
+  '나는 잘못한 일이 있을 때 바로잡으려고 노력한다.',
+  '나는 맡은 일을 다른 사람이 시키지 않아도 스스로 한다.',
+  '나는 내 선택이나 행동의 결과를 받아들이고 책임지려 한다.',
+  '나는 우리 반을 위해 필요한 일에 스스로 참여한다.',
+  '나는 주변에 도움이 필요한 사람이 있으면 내가 할 수 있는 방법으로 돕는다.',
+  '나는 슬프거나 속상한 마음도 소중한 내 마음이라고 생각한다.',
+  '나는 속상한 일이 있어도 시간이 지나면 다시 괜찮아진다.',
+  '나는 어려운 일이 생겨도 잘 해낼 수 있다고 믿는다.',
+  '나는 힘들 때 믿을 수 있는 어른이나 친구에게 도움을 요청할 수 있다.',
+  '나는 나 자신을 소중하게 생각한다.',
+  '나는 친구가 힘들어 보이면 먼저 다가가 위로의 말을 건넨다.',
+  '나는 마음이 힘들 때 나를 스스로 위로할 수 있다. (예: 나에게 \'괜찮아\'라고 말해 주기)',
+  '나는 마음을 건강하게 지키는 생활 습관이 있다. (예: 푹 자기, 몸 움직이기, 쉬는 시간 갖기)',
+];
+
+// 간이용 관찰 (도메인당 4문항, 총 16)
+const OBS16=[
+  {d:0,t:'자신의 감정을 알아차리고 적절하게 표현한다.'},
+  {d:0,t:'화가 나거나 충동적인 상황에서 스스로를 조절하려 노력한다.'},
+  {d:0,t:'자신의 강점과 약점을 알고 있다.'},
+  {d:0,t:'목표를 세우고 실천하려는 모습이 보인다.'},
+  {d:1,t:'친구의 말을 끝까지 경청하고 공감하는 태도가 보인다.'},
+  {d:1,t:'자신의 생각을 적절하게 표현하고 다른 의견을 존중한다.'},
+  {d:1,t:'갈등 상황에서 대화로 해결하려는 모습이 관찰된다.'},
+  {d:1,t:'모둠·학급 활동에서 협력하는 태도가 보인다.'},
+  {d:2,t:'약속과 규칙을 스스로 지키려 한다.'},
+  {d:2,t:'맡은 일을 지시 없이 스스로 처리한다.'},
+  {d:2,t:'자신의 행동 결과를 인정하고 책임지려 한다.'},
+  {d:2,t:'학급과 주변을 위해 자발적으로 참여하고 돕는 모습이 보인다.'},
+  {d:3,t:'부정적 감정을 받아들이고 회복하려는 모습이 보인다.'},
+  {d:3,t:'어려운 상황에서도 스스로 해낼 수 있다는 태도가 관찰된다.'},
+  {d:3,t:'자신을 소중히 여기고 힘들 때 도움을 요청할 수 있다.'},
+  {d:3,t:'힘들어하는 친구에게 공감하고 위로하는 모습이 보인다.'},
+];
+
+// 심층용 관찰 (도메인당 8문항, 총 32) — 학생 자가보고 문항 교사 관찰 버전
+const OBS32=[
+  {d:0,t:'학생 자신이 잘하는 것과 잘 못하는 것을 파악하고 있는 것처럼 보인다.'},
+  {d:0,t:'자신이 소중히 여기는 것(가치)을 말하거나 행동으로 보여준다.'},
+  {d:0,t:'자신의 감정에 이름을 붙여 표현한다. (예: "나 지금 화났어", "불안해")'},
+  {d:0,t:'화가 나거나 속상한 마음을 먼저 알아차리는 모습이 관찰된다.'},
+  {d:0,t:'화가 날 때 스스로 마음을 가라앉히는 전략을 사용한다.'},
+  {d:0,t:'화가 나도 친구에게 상처 주는 말·행동을 참으려 노력한다.'},
+  {d:0,t:'이루고 싶은 목표를 말하고 계획을 세우는 모습이 보인다.'},
+  {d:0,t:'자신이 세운 계획이 잘 되고 있는지 중간에 확인하는 행동이 관찰된다.'},
+  {d:1,t:'친구가 말할 때 끝까지 귀 기울여 듣는 태도가 보인다.'},
+  {d:1,t:'친구의 입장에서 이해하려는 태도(공감적 경청)가 관찰된다.'},
+  {d:1,t:'자신의 생각과 감정을 적절하게(공격적이지 않게) 표현한다.'},
+  {d:1,t:'자신과 다른 의견도 존중하는 태도가 보인다.'},
+  {d:1,t:'친구와 다툰 뒤 대화로 해결책을 찾으려 한다.'},
+  {d:1,t:'배경·생활 방식이 다른 친구도 존중하는 태도가 관찰된다.'},
+  {d:1,t:'모둠 활동에서 역할을 나누고 협력한다.'},
+  {d:1,t:'학급 의사결정에 적극적으로 의견을 내고 참여한다.'},
+  {d:2,t:'다른 사람과 한 약속을 지키려 한다.'},
+  {d:2,t:'학급 규칙을 지시 없이 스스로 지키려 한다.'},
+  {d:2,t:'행동하기 전에 결과를 생각하는 모습이 보인다.'},
+  {d:2,t:'잘못한 일이 있을 때 인정하고 바로잡으려 한다.'},
+  {d:2,t:'맡은 역할을 시키지 않아도 스스로 처리한다.'},
+  {d:2,t:'자신의 선택 결과를 타인 탓으로 돌리지 않고 받아들인다.'},
+  {d:2,t:'학급·공동체를 위해 솔선수범하는 모습이 보인다.'},
+  {d:2,t:'어려움에 처한 주변 사람을 자발적으로 돕는다.'},
+  {d:3,t:'슬픔·불안 같은 부정적 감정도 자연스러운 것으로 받아들이는 것처럼 보인다.'},
+  {d:3,t:'속상한 일이 있어도 시간이 지나면 회복하는 모습이 관찰된다.'},
+  {d:3,t:'어려운 과제 앞에서도 "할 수 있다"는 태도를 유지한다.'},
+  {d:3,t:'힘들 때 교사·친구에게 도움을 요청한다.'},
+  {d:3,t:'자기 자신을 소중하게 여기는 태도(자기 존중)가 보인다.'},
+  {d:3,t:'힘들어하는 친구에게 먼저 다가가 위로하는 모습이 관찰된다.'},
+  {d:3,t:'마음이 힘들 때 스스로를 위로하는 말이나 행동을 한다.'},
+  {d:3,t:'건강한 생활 습관(충분한 수면, 활동, 휴식)을 유지하는 것처럼 보인다.'},
+];
+
+// 학생용 영역 설명 + 노력 팁 (수준별: high/mid/low)
+const STUDENT_GUIDE=[
+  // 자기인식·관리
+  {
+    high:{
+      desc:'나의 감정과 강점을 잘 알고, 힘든 상황에서도 스스로를 조절할 수 있어요. 목표를 세우고 꾸준히 실천하는 멋진 힘을 가지고 있어요! 🌟',
+      tips:['기쁨·슬픔·화남·걱정 외에 더 다양한 감정을 탐색해 보세요','어려운 목표를 세우고 중간에 점검하는 습관을 만들어 보세요','친구에게 감정 조절 방법을 알려주는 역할을 해보세요']
+    },
+    mid:{
+      desc:'기본적인 감정 조절 능력은 갖추고 있어요. 가끔 힘든 상황에서 감정이 앞설 수 있지만, 조금씩 연습하면 더 잘할 수 있어요! 💪',
+      tips:['하루에 한 번 "오늘 나의 감정은?" 적어보기','화가 날 때 10까지 세거나 깊게 숨 쉬어 보기','작은 목표를 세우고 달성했을 때 스스로를 칭찬해 주세요']
+    },
+    low:{
+      desc:'아직 감정을 알아차리거나 조절하는 게 어렵게 느껴질 수 있어요. 괜찮아요! 조금씩 연습하면 충분히 성장할 수 있어요 🌱',
+      tips:['기쁨·슬픔·화남·걱정, 4가지 감정부터 천천히 익혀보기','화가 나면 선생님이나 부모님께 먼저 이야기해 보세요','오늘 잘한 것 1가지를 매일 찾아보는 습관 만들기']
+    }
+  },
+  // 소통·협력
+  {
+    high:{
+      desc:'친구의 말을 잘 듣고 내 생각도 잘 표현해요. 갈등이 생겨도 대화로 해결하려는 성숙한 모습이 멋져요! 🤝',
+      tips:['토론이나 협동 프로젝트에 적극적으로 참여해 보세요','다른 친구들이 의견을 말할 수 있도록 기회를 만들어 주세요','친구들 사이에서 갈등을 도와주는 역할을 해보세요']
+    },
+    mid:{
+      desc:'친구와 대화하고 함께 활동하는 능력이 있어요. 가끔 의견이 다를 때 감정이 앞설 수 있는데, 조금만 더 연습해봐요! 😊',
+      tips:['"나는 ~할 때 ~한 기분이야"라고 내 감정을 표현해 보세요','친구 말을 듣고 한 문장으로 반복해 주는 연습을 해보세요','의견이 달라도 "그렇구나~" 하고 먼저 인정해 보세요']
+    },
+    low:{
+      desc:'아직 친구와 대화하거나 협력하는 게 쉽지 않을 수 있어요. 하지만 조금씩 연습하면 분명히 좋아질 거예요! 🌈',
+      tips:['먼저 단 한 명의 친구와 짝 활동부터 시작해 보세요','친구가 말할 때 눈을 보고 고개를 끄덕여 주는 연습을 해보세요','하고 싶은 말이 있으면 선생님께 먼저 말하는 연습을 해보세요']
+    }
+  },
+  // 책임
+  {
+    high:{
+      desc:'약속을 잘 지키고 맡은 일을 스스로 해요. 내 행동의 결과를 책임지는 든든한 모습이에요! ⭐',
+      tips:['더 큰 역할(학급 임원, 모둠장)에 도전해 보세요','주변 환경이나 다른 사람을 위해 할 수 있는 일을 찾아보세요','친구들이 책임감을 가질 수 있도록 본보기가 되어 주세요']
+    },
+    mid:{
+      desc:'기본적인 약속과 규칙은 잘 지켜요. 가끔 어려운 상황에서 흔들릴 수 있지만, 조금 더 노력하면 훨씬 잘할 수 있어요! 💪',
+      tips:['나만의 약속 카드를 만들고 직접 서명해 보세요','실수했을 때 "내가 잘못했어, 고칠게"라고 말하는 연습을 해보세요','모둠 활동에서 맡은 역할을 끝까지 해보세요']
+    },
+    low:{
+      desc:'아직 규칙을 지키거나 맡은 일을 꾸준히 하는 게 힘들 수 있어요. 아주 작은 것부터 시작하면 충분히 할 수 있어요! 🌱',
+      tips:['아주 작은 역할(예: 창문 담당)부터 성공 경험을 쌓아보세요','잘못했을 때 솔직하게 말하면 오히려 더 용감한 거예요','매일 한 가지 약속(예: 숙제 하기)을 정하고 지켜보세요']
+    }
+  },
+  // 마음돌봄
+  {
+    high:{
+      desc:'나의 마음을 소중히 여기고, 힘든 일이 있어도 잘 회복해요. 친구도 잘 위로하는 따뜻한 마음을 가지고 있어요! 💛',
+      tips:['매일 감사한 일 1가지를 적어보는 습관을 만들어 보세요','힘들어하는 친구에게 먼저 다가가 위로해 주세요','나를 위한 휴식 방법을 찾아서 자주 활용해 보세요']
+    },
+    mid:{
+      desc:'기본적인 마음 돌봄 능력이 있어요. 가끔 힘들 때 도움 요청이 어려울 수 있는데, 괜찮다는 걸 기억해요! 😊',
+      tips:['"이럴 수도 있어, 괜찮아"라고 스스로에게 말해 보세요','힘들 때 선생님이나 부모님께 도움을 요청해 보세요','내가 좋아하는 것(음악 듣기, 그림 그리기)으로 기분 전환해 보세요']
+    },
+    low:{
+      desc:'아직 힘든 감정을 받아들이거나 스스로를 위로하는 게 어려울 수 있어요. 하지만 조금씩 연습하면 충분히 성장할 수 있어요 🌱',
+      tips:['매일 "오늘 잘한 것" 1가지를 찾아보세요','힘들면 꼭 선생님이나 부모님께 말해요 — 도움 요청은 용감한 행동이에요','좋아하는 것을 하며 쉬는 시간을 만들어 보세요']
+    }
+  }
+];
+
+const SCALE_NUMS=['①','②','③','④','⑤'];
+const SCALE_LBLS=['전혀\n그렇지\n않아요','그렇지\n않아요','보통\n이에요','그래요','매우\n그래요'];
+const OBS_SCALE=['①전혀 아님','②아님','③보통','④그렇다','⑤매우 그렇다'];
+const PW='1234';
+function genCode(seed){
+  // 학교 이름 기반 + 랜덤으로 6자리 영숫자 코드 생성
+  const chars='ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+  let hash=0;
+  for(let i=0;i<seed.length;i++)hash=(hash*31+seed.charCodeAt(i))>>>0;
+  let code='';
+  for(let i=0;i<6;i++){code+=chars[(hash>>>(i*5))%chars.length];}
+  // 뒤 2자리는 랜덤으로 충돌 방지
+  code=code.slice(0,4)+chars[Math.floor(Math.random()*chars.length)]+chars[Math.floor(Math.random()*chars.length)];
+  return code;
+}
+const answers={};
+let currentStudent=null;
+let obsAnswers={};
+let obsMode=16;
+let filterMode='all';
+let allStudents=[];
+let db=null;
+
+document.getElementById('sDate').valueAsDate=new Date();
+document.getElementById('pDate').valueAsDate=new Date();
+
+// Firestore REST API 래퍼 (CDN 없이 fetch만 사용)
+const FS_PROJECT='sel-check';
+const FS_KEY='AIzaSyCZ2Iv7YtJDllLiQvtLEWVxSB-Fb7_UhUY';
+const FS_BASE=`https://firestore.googleapis.com/v1/projects/${FS_PROJECT}/databases/(default)/documents`;
+
+function toFS(val){
+  if(val===null||val===undefined)return{nullValue:null};
+  if(typeof val==='boolean')return{booleanValue:val};
+  if(typeof val==='number')return Number.isInteger(val)?{integerValue:String(val)}:{doubleValue:val};
+  if(typeof val==='string')return{stringValue:val};
+  if(Array.isArray(val))return{arrayValue:{values:val.map(toFS)}};
+  if(typeof val==='object'){const f={};Object.keys(val).forEach(k=>f[k]=toFS(val[k]));return{mapValue:{fields:f}};}
+  return{stringValue:String(val)};
+}
+function fromFS(val){
+  if(!val)return null;
+  if('nullValue' in val)return null;
+  if('booleanValue' in val)return val.booleanValue;
+  if('integerValue' in val)return Number(val.integerValue);
+  if('doubleValue' in val)return val.doubleValue;
+  if('stringValue' in val)return val.stringValue;
+  if('arrayValue' in val)return(val.arrayValue.values||[]).map(fromFS);
+  if('mapValue' in val){const o={};Object.keys(val.mapValue.fields||{}).forEach(k=>o[k]=fromFS(val.mapValue.fields[k]));return o;}
+  return null;
+}
+function docToData(doc){if(!doc.fields)return{};const o={};Object.keys(doc.fields).forEach(k=>o[k]=fromFS(doc.fields[k]));return o;}
+function dataToFields(data){const f={};Object.keys(data).forEach(k=>f[k]=toFS(data[k]));return f;}
+
+document.addEventListener('DOMContentLoaded',()=>{
+  db={
+    doc:(path)=>({
+      get:async()=>{
+        const r=await fetch(`${FS_BASE}/${path}?key=${FS_KEY}`);
+        if(r.status===404)return{exists:false,data:()=>({})};
+        if(!r.ok)throw new Error(await r.text());
+        const j=await r.json();return{exists:true,data:()=>docToData(j)};
+      },
+      set:async(data)=>{
+        const fields=dataToFields(data);
+        const parts=path.split('/');const docId=parts.pop();const colPath=parts.join('/');
+        const r=await fetch(`${FS_BASE}/${colPath}?documentId=${docId}&key=${FS_KEY}`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({fields})});
+        if(!r.ok){
+          // 이미 있으면 patch
+          await fetch(`${FS_BASE}/${path}?key=${FS_KEY}`,{method:'PATCH',headers:{'Content-Type':'application/json'},body:JSON.stringify({fields})});
+        }
+      },
+      update:async(data)=>{
+        const fields=dataToFields(data);
+        const updateMask=Object.keys(data).map(k=>`updateMask.fieldPaths=${k}`).join('&');
+        await fetch(`${FS_BASE}/${path}?${updateMask}&key=${FS_KEY}`,{method:'PATCH',headers:{'Content-Type':'application/json'},body:JSON.stringify({fields})});
+      },
+      delete:async()=>{
+        await fetch(`${FS_BASE}/${path}?key=${FS_KEY}`,{method:'DELETE'});
+      }
+    }),
+    collection:(path)=>({
+      get:async()=>{
+        const r=await fetch(`${FS_BASE}/${path}?key=${FS_KEY}`);
+        if(!r.ok)return{docs:[]};
+        const j=await r.json();
+        const docs=(j.documents||[]).map(d=>({id:d.name.split('/').pop(),data:()=>docToData(d)}));
+        return{docs};
+      }
+    })
+  };
+  console.log('Firestore REST API 초기화 완료');
+});
+
+const screens=['scRole','scStudentCode','scMode','scStudent','scPaper','scResult','scTeacherCode','scTeacher','scDetail','scAddStudent'];
+function show(id){screens.forEach(s=>document.getElementById(s).hidden=s!==id)}
+function goMode(){show('scMode');document.getElementById('prog').style.width='0%'}
+
+// 역할 분기
+function goRoleStudent(){show('scStudentCode')}
+function goRoleTeacher(){show('scTeacherCode')}
+
+// 학교 코드
+let schoolCode='';
+let schoolName='';
+
+function schoolKey(path){return schoolCode?`schools/${schoolCode}/${path}`:path;}
+
+function applySchool(code,name){
+  schoolCode=code;schoolName=name||code;
+  document.getElementById('hSub').textContent=name&&name!==code?name:'';
+  document.getElementById('modeSchoolName').textContent=name||'사회정서역량 검사';
+  document.getElementById('modeSub').textContent=`학교 코드: ${code} · 3~4학년용`;
+}
+
+// 학생: 학교 코드 입력
+async function enterStudentCode(){
+  const v=document.getElementById('stuCodeInput').value.trim().toUpperCase();
+  if(!v){document.getElementById('stuCodeErr').textContent='코드를 입력해 주세요.';return;}
+  document.getElementById('stuCodeErr').textContent='확인 중…';
+  let name=v;
+  if(db){
+    try{const snap=await db.doc(`schools/${v}/info`).get();if(snap.exists)name=snap.data().name||v;}
+    catch(e){document.getElementById('stuCodeErr').textContent='⚠️ DB 연결 오류. 잠시 후 다시 시도해 주세요.';return;}
+  } else {
+    document.getElementById('stuCodeErr').textContent='⚠️ DB에 연결되지 않았어요. 잠시 후 다시 시도해 주세요.';return;
+  }
+  document.getElementById('stuCodeErr').textContent='';
+  applySchool(v,name);
+  try{localStorage.setItem('sel_role','student');localStorage.setItem('sel_school_code',v);localStorage.setItem('sel_school_name',name);}catch(e){}
+  show('scMode');
+}
+
+// 역할 UI 업데이트
+let currentTeacherRole=''; // 'homeroom' | 'admin'
+let currentTeacherClass='';
+
+function updateRoleUI(){
+  const val=document.querySelector('input[name="tchRole"]:checked')?.value;
+  currentTeacherRole=val||'';
+  document.getElementById('roleCardHomeroom').style.borderColor=val==='homeroom'?'var(--c1)':'var(--border)';
+  document.getElementById('roleCardAdmin').style.borderColor=val==='admin'?'var(--c1)':'var(--border)';
+  document.getElementById('classInputWrap').hidden=val!=='homeroom';
+}
+
+// 교사: 코드 + 비밀번호 (역할 기반)
+async function checkTeacherLogin(){
+  const code=document.getElementById('tchCodeInput').value.trim().toUpperCase();
+  const pw=document.getElementById('tchPwInput').value;
+  const role=document.querySelector('input[name="tchRole"]:checked')?.value;
+  if(!pw){document.getElementById('tchErr').textContent='비밀번호를 입력해 주세요.';return;}
+  if(!role){document.getElementById('tchErr').textContent='역할(학급담임 / 업무담당)을 선택해 주세요.';return;}
+  document.getElementById('tchErr').textContent='확인 중…';
+
+  if(!db){document.getElementById('tchErr').textContent='⚠️ DB에 연결되지 않았어요. 잠시 후 다시 시도해 주세요.';return;}
+
+  let name=code;
+  // 코드 없이 처음 접속: 학교 등록 모드
+  if(!code){
+    const inputName=prompt('학교 이름을 입력해 주세요.\n(예: ○○초등학교)');
+    if(!inputName){document.getElementById('tchErr').textContent='학교 이름을 입력해야 해요.';return;}
+    if(pw!==PW){document.getElementById('tchErr').textContent='기본 비밀번호(1234)로 먼저 등록해 주세요.';return;}
+    const newCode=genCode(inputName);
+    try{
+      const check=await db.doc(`schools/${newCode}/info`).get();
+      const finalCode=check.exists?genCode(inputName+Date.now()):newCode;
+      await db.doc(`schools/${finalCode}/info`).set({name:inputName,pw_homeroom:PW,pw_admin:PW,createdAt:Date.now()});
+      alert(`학교 등록 완료!\n\n학교 이름: ${inputName}\n학교 코드: ${finalCode}\n\n이 코드를 학생들에게 알려주세요.`);
+      applySchool(finalCode,inputName);
+      try{localStorage.removeItem('sel_school_code');localStorage.removeItem('sel_school_name');localStorage.setItem('sel_role','teacher');localStorage.setItem('sel_school_code',finalCode);localStorage.setItem('sel_school_name',inputName);localStorage.setItem('sel_teacher_role',role);}catch(e){}
+      currentTeacherRole=role;
+      currentTeacherClass=role==='homeroom'?(document.getElementById('tchClassInput').value.trim()||''):'';
+      showTeacher();return;
+    }catch(e){document.getElementById('tchErr').textContent='등록 중 오류가 발생했어요.';return;}
+  }
+
+  let storedPwHomeroom=PW, storedPwAdmin=PW;
+  try{
+    const snap=await db.doc(`schools/${code}/info`).get();
+    if(snap.exists){
+      const d=snap.data();
+      name=d.name||code;
+      storedPwHomeroom=d.pw_homeroom||d.pw||PW;
+      storedPwAdmin=d.pw_admin||d.pw||PW;
+    }else{document.getElementById('tchErr').textContent='등록된 학교 코드가 아니에요. 코드를 비우고 학교를 먼저 등록해 주세요.';return;}
+  }catch(e){document.getElementById('tchErr').textContent='확인 중 오류가 발생했어요.';return;}
+
+  const expectedPw=role==='homeroom'?storedPwHomeroom:storedPwAdmin;
+  if(pw!==expectedPw){document.getElementById('tchErr').textContent='비밀번호가 맞지 않아요.';return;}
+  document.getElementById('tchErr').textContent='';
+  currentTeacherRole=role;
+  currentTeacherClass=role==='homeroom'?(document.getElementById('tchClassInput').value.trim()||''):'';
+  applySchool(code,name);
+  try{localStorage.setItem('sel_role','teacher');localStorage.setItem('sel_school_code',code);localStorage.setItem('sel_school_name',name);localStorage.setItem('sel_teacher_role',role);localStorage.setItem('sel_teacher_class',currentTeacherClass);}catch(e){}
+  showTeacher();
+}
+
+// 메인 탭 전환
+function switchMainTab(tab){
+  ['list','summary','settings'].forEach(t=>{
+    document.getElementById('mainPanel'+t.charAt(0).toUpperCase()+t.slice(1)).hidden=t!==tab;
+    document.getElementById('mainTab'+t.charAt(0).toUpperCase()+t.slice(1)).classList.toggle('active',t===tab);
+  });
+  if(tab==='summary')renderSummary('self');
+  if(tab==='settings')renderSettingsInfo();
+}
+
+// 점수요약 탭
+let summMode='self';
+function switchSummTab(mode){
+  summMode=mode;
+  document.getElementById('summTabSelf').classList.toggle('active',mode==='self');
+  document.getElementById('summTabObs').classList.toggle('active',mode==='obs');
+  renderSummary(mode);
+}
+function renderSummary(mode){
+  const el=document.getElementById('summaryTable');
+  const list=getFilteredStudents();
+  if(!list.length){el.innerHTML='<p style="color:var(--fg3);font-size:.85rem;padding:16px 0">학생 데이터가 없어요.</p>';return;}
+  const domHeaders=DOMAINS.map(d=>`<th style="font-size:.7rem;color:${d.color};padding:6px 4px;white-space:nowrap">${d.name.replace('·','<br>')}</th>`).join('');
+  const rows=list.map(s=>{
+    const hasData=mode==='self'?(s.scores&&s.scores.length===4):(s.obsScores&&s.obsScores.length===4);
+    const domCells=DOMAINS.map((_,di)=>{
+      if(!hasData)return`<td style="text-align:center;color:var(--fg3);font-size:.75rem">-</td>`;
+      const score=mode==='self'?s.scores[di]:s.obsScores[di];
+      const max=mode==='self'?40:(s.obsMode===32?40:20);
+      const lv=levelOf(score,max);
+      return`<td style="text-align:center"><span style="font-size:.7rem;padding:2px 6px;border-radius:20px;background:${lv.color}22;color:${lv.color};white-space:nowrap;font-weight:700">${lv.label}</span></td>`;
+    }).join('');
+    return`<tr style="border-bottom:1px solid var(--border)">
+      <td style="padding:7px 6px;font-size:.82rem;white-space:nowrap">${s.name}</td>
+      <td style="padding:7px 6px;font-size:.75rem;color:var(--fg2);white-space:nowrap">${s.class||'-'}</td>
+      ${domCells}
+    </tr>`;
+  }).join('');
+  el.innerHTML=`<table style="width:100%;border-collapse:collapse;min-width:460px">
+    <thead><tr style="border-bottom:2px solid var(--border)">
+      <th style="text-align:left;padding:6px;font-size:.8rem">이름</th>
+      <th style="text-align:left;padding:6px;font-size:.8rem">학급</th>
+      ${domHeaders}
+    </tr></thead>
+    <tbody>${rows}</tbody>
+  </table>`;
+}
+
+// 설정 탭 정보 표시
+function renderSettingsInfo(){
+  const el=document.getElementById('roleInfoBox');
+  const roleLabel=currentTeacherRole==='homeroom'?'학급담임':'업무담당';
+  const classLabel=currentTeacherRole==='homeroom'&&currentTeacherClass?` (${currentTeacherClass})`:'';
+  el.innerHTML=`<strong>현재 로그인 정보</strong><br>
+    역할: ${roleLabel}${classLabel}<br>
+    학교: ${schoolName||'-'} (코드: ${schoolCode||'-'})<br><br>
+    <strong>비밀번호 초기값</strong><br>담임: 1234 / 업무: 1234`;
+}
+
+// 비밀번호 변경
+async function changePw(){
+  const type=document.querySelector('input[name="pwChangeType"]:checked')?.value;
+  const old=document.getElementById('pwOld').value;
+  const n1=document.getElementById('pwNew1').value;
+  const n2=document.getElementById('pwNew2').value;
+  const errEl=document.getElementById('pwChangeErr');
+  if(!type){errEl.textContent='변경할 비밀번호 종류를 선택해 주세요.';return;}
+  if(!old||!n1||!n2){errEl.textContent='모든 항목을 입력해 주세요.';return;}
+  if(n1!==n2){errEl.textContent='새 비밀번호가 일치하지 않아요.';return;}
+  if(n1.length<4){errEl.textContent='비밀번호는 4자 이상이어야 해요.';return;}
+  if(!db||!schoolCode){errEl.textContent='DB에 연결되지 않았어요.';return;}
+  errEl.textContent='변경 중…';
+  try{
+    const snap=await db.doc(`schools/${schoolCode}/info`).get();
+    if(!snap.exists){errEl.textContent='학교 정보를 찾을 수 없어요.';return;}
+    const d=snap.data();
+    const field=type==='homeroom'?'pw_homeroom':'pw_admin';
+    const cur=d[field]||d.pw||PW;
+    if(old!==cur){errEl.textContent='현재 비밀번호가 맞지 않아요.';return;}
+    await db.doc(`schools/${schoolCode}/info`).update({[field]:n1});
+    errEl.style.color='var(--c2)';
+    errEl.textContent='✅ 비밀번호가 변경됐어요!';
+    document.getElementById('pwOld').value='';
+    document.getElementById('pwNew1').value='';
+    document.getElementById('pwNew2').value='';
+    setTimeout(()=>{errEl.textContent='';errEl.style.color='';},3000);
+  }catch(e){errEl.textContent='변경 중 오류가 발생했어요.';errEl.style.color='';}
+}
+
+// 학교 코드 삭제 (전체 삭제)
+async function deleteSchoolCode(){
+  if(!db||!schoolCode){alert('DB에 연결되지 않았어요.');return;}
+  const yn=confirm(`⚠️ 학교 코드 "${schoolCode}" 와 모든 관련 데이터를 영구 삭제할까요?\n\n• 학생 데이터 전부\n• 학교 코드\n• 비밀번호 설정\n\n이 작업은 되돌릴 수 없어요!`);
+  if(!yn)return;
+  const yn2=confirm('정말로 삭제할까요?\n삭제 후에는 같은 코드를 복구할 수 없어요.');
+  if(!yn2)return;
+  try{
+    // 학생 데이터 삭제
+    const snap=await db.collection(schoolKey('students')).get();
+    for(const d of snap.docs){await db.doc(schoolKey('students')+'/'+d.id).delete();}
+    // 학교 info 삭제
+    await db.doc(`schools/${schoolCode}/info`).delete();
+    // 로컬스토리지 초기화
+    try{localStorage.removeItem('sel_school_code');localStorage.removeItem('sel_school_name');localStorage.removeItem('sel_role');localStorage.removeItem('sel_teacher_role');localStorage.removeItem('sel_teacher_class');}catch(e){}
+    alert('학교 코드와 모든 데이터가 삭제됐어요.\n처음 화면으로 돌아갑니다.');
+    schoolCode='';schoolName='';allStudents=[];
+    show('scRole');
+  }catch(e){alert('삭제 중 오류가 발생했어요: '+e.message);}
+}
+
+// 저장된 세션 복원
+try{
+  const r=localStorage.getItem('sel_role');
+  const c=localStorage.getItem('sel_school_code');
+  const n=localStorage.getItem('sel_school_name');
+  const tr=localStorage.getItem('sel_teacher_role');
+  const tc=localStorage.getItem('sel_teacher_class');
+  if(r&&c){
+    applySchool(c,n||c);
+    if(r==='teacher'){
+      document.getElementById('tchCodeInput').value=c;
+      if(tr){currentTeacherRole=tr;currentTeacherClass=tc||'';}
+    }else{document.getElementById('stuCodeInput').value=c;show('scMode');}
+  }
+}catch(e){}
+
+function goStudent(){
+  buildQuestions();
+  show('scStudent');
+  updateProgress();
+}
+function goPaperInput(){show('scPaper')}
+async function showTeacher(){
+  show('scTeacher');
+  switchMainTab('list');
+  // 역할 헤더 표시
+  const roleLabel=currentTeacherRole==='homeroom'?
+    `🏫 학급담임${currentTeacherClass?' — '+currentTeacherClass:''}`:
+    '📋 업무담당 (전체 열람)';
+  let badge=document.getElementById('teacherRoleBadge');
+  if(!badge){
+    badge=document.createElement('div');
+    badge.id='teacherRoleBadge';
+    badge.style.cssText='font-size:.75rem;color:var(--fg2);margin-bottom:4px;padding:4px 10px;background:var(--bg2);border-radius:20px;display:inline-block';
+    const backBtn=document.querySelector('#scTeacher .back-btn');
+    backBtn?.insertAdjacentElement('afterend',badge);
+  }
+  badge.textContent=roleLabel;
+  // 업무담당 전용 필터 박스 표시
+  const filterBox=document.getElementById('adminFilterBox');
+  if(filterBox)filterBox.style.display=currentTeacherRole==='admin'?'flex':'none';
+  await loadStudents();
+}
+
+async function resetSchoolData(){
+  if(!db){alert('DB에 연결되지 않았어요.');return;}
+  const yn=confirm(`⚠️ "${schoolName}" 학교의 모든 학생 데이터를 삭제할까요?\n\n이 작업은 되돌릴 수 없어요!`);
+  if(!yn)return;
+  const yn2=confirm('정말로 삭제할까요? 삭제된 데이터는 복구할 수 없어요.');
+  if(!yn2)return;
+  try{
+    const snap=await db.collection(schoolKey('students')).get();
+    for(const d of snap.docs){await db.doc(schoolKey('students')+'/'+d.id).delete();}
+    allStudents=[];
+    renderStudents();
+    alert('초기화 완료!');
+  }catch(e){alert('초기화 중 오류가 발생했어요: '+e.message);}
+}
+
+function buildQuestions(){
+  const area=document.getElementById('qArea');area.innerHTML='';
+  ITEMS.forEach((text,idx)=>{
+    const no=idx+1;
+    const div=document.createElement('div');div.className='q-card';div.id=`qc-${no}`;
+    const opts=SCALE_NUMS.map((n,v)=>`<label class="q-opt"><input type="radio" name="q${no}" value="${v+1}" onchange="onAns(${no})"><div class="q-circle">${n}</div><span class="q-lbl">${SCALE_LBLS[v].replace(/\n/g,'<br>')}</span></label>`).join('');
+    div.innerHTML=`<div class="q-top"><div class="q-no">${no}</div><div class="q-text">${text}</div></div><div class="q-opts">${opts}</div>`;
+    area.appendChild(div);
+  });
+}
+function onAns(no){
+  const v=document.querySelector(`input[name="q${no}"]:checked`)?.value;
+  if(v){answers[no]=parseInt(v);document.getElementById(`qc-${no}`).classList.add('done');}
+  updateProgress();
+}
+function updateProgress(){
+  const n=Object.keys(answers).length;
+  document.getElementById('ansCount').textContent=`${n} / 32 문항 응답됨`;
+  document.getElementById('prog').style.width=(n/32*100)+'%';
+}
+
+async function submitSurvey(){
+  if(Object.keys(answers).length<32){
+    const first=document.querySelector('.q-card:not(.done)');
+    if(first)first.scrollIntoView({behavior:'smooth',block:'center'});
+    alert(`아직 ${32-Object.keys(answers).length}개 문항에 답하지 않았어요!`);return;
+  }
+  const name=document.getElementById('sName').value||'학생';
+  const school=document.getElementById('sSchool').value;
+  const cls=document.getElementById('sClass').value;
+  const date=document.getElementById('sDate').value;
+  const scores=DOMAINS.map((_,di)=>{let s=0;for(let i=di*8+1;i<=di*8+8;i++)s+=answers[i]||0;return s;});
+  const record={name,school,class:cls,date,scores,type:'online',obsScores:null,obsMemo:'',savedAt:Date.now(),schoolCode};
+  if(db){
+    try{
+      // 같은 이름+반의 교사등록 레코드가 있으면 업데이트
+      const existing=allStudents.find(s=>s.type==='teacherOnly'&&s.name===name&&s.class===cls);
+      if(existing&&existing._id){
+        await db.doc(schoolKey('students')+'/'+existing._id).update({scores,type:'online',date,savedAt:Date.now()});
+        record._id=existing._id;
+      } else {
+        const id=`${Date.now()}_${Math.random().toString(36).slice(2,6)}`;
+        await db.doc(schoolKey('students')+'/'+id).set(record);
+        record._id=id;
+      }
+    }catch(e){}
+  }
+  showResult(record,false);
+}
+
+async function submitPaper(){
+  const vals=[parseInt(document.getElementById('p1').value)||0,parseInt(document.getElementById('p2').value)||0,parseInt(document.getElementById('p3').value)||0,parseInt(document.getElementById('p4').value)||0];
+  if(vals.some(v=>v<8||v>40)){alert('각 영역 점수는 8~40점 사이로 입력해 주세요.');return;}
+  const name=document.getElementById('pName').value||'학생';
+  const school=document.getElementById('pSchool').value;
+  const cls=document.getElementById('pClass').value;
+  const date=document.getElementById('pDate').value;
+  const record={name,school,class:cls,date,scores:vals,type:'paper',obsScores:null,obsMemo:'',savedAt:Date.now(),schoolCode};
+  if(db){try{const id=`${Date.now()}_${Math.random().toString(36).slice(2,6)}`;await db.doc(schoolKey('students')+'/'+id).set(record);record._id=id;}catch(e){}}
+  showResult(record,false);
+}
+
+function levelOf(s,max=40){
+  const pct=s/max*100;
+  if(pct>=85)return{label:'아주잘함',color:'var(--c1)',tier:'high'};
+  if(pct>=65)return{label:'잘함',color:'var(--c3)',tier:'mid'};
+  if(pct>=45)return{label:'자라나는 중',color:'var(--c2)',tier:'mid'};
+  return{label:'도움 필요',color:'var(--c4)',tier:'low'};
+}
+
+function showResult(rec,fromTeacher=false){
+  currentStudent=rec;
+  document.getElementById('rName').textContent=[rec.school,rec.class,rec.name].filter(Boolean).join(' · ');
+  document.getElementById('rDate').textContent=rec.date?`검사일: ${rec.date}`:'';
+  document.getElementById('retakeBtn').hidden=fromTeacher;
+  document.getElementById('resultBack').onclick=fromTeacher?showTeacher:goMode;
+  const dRes=document.getElementById('dResults');dRes.innerHTML='';
+  let total=0;
+  DOMAINS.forEach((d,i)=>{
+    const s=rec.scores[i];total+=s;
+    const lv=levelOf(s);
+    const pct=(s/40*100).toFixed(0);
+    dRes.innerHTML+=`<div class="d-result"><div class="dr-left"><div class="dr-name" style="color:${d.color}">${d.name}</div><div class="dr-level" style="background:${lv.color}">${lv.label}</div><div class="dr-bar-bg"><div class="dr-bar" style="width:${pct}%;background:${d.color}"></div></div></div><div class="dr-score" style="color:${d.color}">${s}<span>/ 40</span></div></div>`;
+  });
+  const tLv=levelOf(Math.round(total/4));
+  document.getElementById('totalCard').innerHTML=`<div class="tc-label">전체 사회정서역량</div><div class="tc-score">${total}</div><div class="tc-level">총점 ${total} / 160점 · ${tLv.label}</div>`;
+
+  // 학생용 영역별 설명 + 노력 팁 (교사 화면에서 열면 숨김)
+  const stuGuideArea=document.getElementById('stuDomainGuide');
+  if(stuGuideArea){
+    if(fromTeacher){stuGuideArea.hidden=true;}
+    else{
+      stuGuideArea.hidden=false;
+      stuGuideArea.innerHTML='<div style="font-size:.85rem;font-weight:700;color:var(--fg);margin:24px 0 12px">📖 내 역량 영역별 이야기</div>'+
+      DOMAINS.map((d,i)=>{
+        const s=rec.scores[i];
+        const lv=levelOf(s);
+        const sg=STUDENT_GUIDE[i][lv.tier];
+        return `<div style="background:var(--bg2);border:1.5px solid ${d.color}30;border-radius:16px;padding:18px;margin-bottom:12px">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+            <div style="width:36px;height:36px;border-radius:50%;background:${d.color}18;display:flex;align-items:center;justify-content:center;font-size:1.2rem">${['🧠','🤝','⭐','💛'][i]}</div>
+            <div>
+              <div style="font-weight:700;font-size:.9rem;color:${d.color}">${d.name}</div>
+              <div style="font-size:.7rem;padding:2px 8px;background:${lv.color};color:#fff;border-radius:10px;display:inline-block;margin-top:2px">${lv.label}</div>
+            </div>
+          </div>
+          <p style="font-size:.82rem;line-height:1.75;color:var(--fg2);margin-bottom:12px">${sg.desc}</p>
+          <div style="background:${d.color}0D;border-radius:10px;padding:12px 14px">
+            <div style="font-size:.75rem;font-weight:700;color:${d.color};margin-bottom:6px">💪 이런 노력을 해봐요!</div>
+            <ul style="padding-left:16px;margin:0">${sg.tips.map(t=>`<li style="font-size:.78rem;color:var(--fg2);line-height:1.7">${t}</li>`).join('')}</ul>
+          </div>
+        </div>`;
+      }).join('');
+    }
+  }
+
+  show('scResult');document.getElementById('prog').style.width='100%';
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+async function loadStudents(){
+  const list=document.getElementById('stuList');
+  list.innerHTML='<div class="stu-empty">불러오는 중…</div>';
+  if(!db){list.innerHTML='<div class="stu-empty">DB에 연결되지 않았어요.</div>';return;}
+  if(!schoolCode){list.innerHTML='<div class="stu-empty">학교 코드가 설정되지 않았어요.</div>';return;}
+  try{
+    const snap=await db.collection(schoolKey('students')).get();
+    allStudents=snap.docs.map(d=>({_id:d.id,...d.data()})).sort((a,b)=>{
+      // 반 → 이름 순으로 정렬
+      const ca=(a.class||'').localeCompare(b.class||'','ko');
+      if(ca!==0)return ca;
+      return (a.name||'').localeCompare(b.name||'','ko');
+    });
+    populateClassFilter();
+    renderStudents();
+  }catch(e){list.innerHTML='<div class="stu-empty">목록을 불러오는 중 오류가 발생했어요.</div>';}
+}
+function renderStudents(){
+  const list=document.getElementById('stuList');
+  const filt=getFilteredStudents();
+  if(!filt.length){
+    const msg=currentTeacherRole==='homeroom'&&currentTeacherClass?
+      `<div class="stu-empty">${currentTeacherClass} 학생 데이터가 아직 없어요.</div>`:
+      '<div class="stu-empty">아직 결과가 없어요.</div>';
+    list.innerHTML=msg;return;
+  }
+  list.innerHTML=filt.map((s,i)=>{
+    const isTeacherOnly=s.type==='teacherOnly';
+    const hasScores=!isTeacherOnly&&s.scores&&s.scores.length===4;
+    const total=hasScores?s.scores.reduce((a,b)=>a+b,0):null;
+    const lv=hasScores?levelOf(Math.round(total/4)):null;
+    const typeBadge=s.type==='online'?'온라인':s.type==='paper'?'서면':'교사등록';
+    const typeBg=s.type==='online'?'var(--c1)':s.type==='paper'?'var(--fg2)':'var(--c4)';
+    const scoreBadge=hasScores?`<span class="stu-badge" style="background:${lv.color}">${total}점</span>`:`<span class="stu-badge" style="background:var(--fg3)">미검사</span>`;
+
+    // 학생 자가보고 영역별
+    const selfDomains=hasScores?DOMAINS.map((d,di)=>{
+      const lvi=levelOf(s.scores[di]);
+      return `<span style="font-size:.7rem;padding:2px 7px;border-radius:20px;background:${lvi.color}22;color:${lvi.color};border:1px solid ${lvi.color}44">${d.name.split('·')[0].trim()} ${lvi.label}</span>`;
+    }).join(''):'';
+
+    // 교사 관찰 영역별
+    const hasObs=s.obsScores&&s.obsScores.length===4;
+    const obsDomains=hasObs?DOMAINS.map((d,di)=>{
+      const max=obsMode===32?40:20;
+      const lvi=levelOf(s.obsScores[di],max);
+      return `<span style="font-size:.7rem;padding:2px 7px;border-radius:20px;background:${lvi.color}22;color:${lvi.color};border:1px solid ${lvi.color}44">👁 ${d.name.split('·')[0].trim()} ${lvi.label}</span>`;
+    }).join(''):'';
+
+    const domainRow=(selfDomains||obsDomains)?`<div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px">${selfDomains}${obsDomains}</div>`:'';
+
+    return `<div class="stu-item" onclick="showDetail('${s._id}')" style="flex-direction:column;align-items:flex-start;gap:6px">
+      <div style="display:flex;align-items:center;width:100%;gap:8px">
+        <span class="stu-no">${i+1}</span>
+        <span style="flex:1"><span class="stu-name">${s.name}</span><span class="stu-class">${[s.school,s.class].filter(Boolean).join(' ')}</span></span>
+        <span class="stu-badges">
+          ${scoreBadge}
+          <span class="stu-badge" style="background:${typeBg}">${typeBadge}</span>
+        </span>
+      </div>
+      ${domainRow}
+    </div>`;
+  }).join('');
+}
+function getFilteredStudents(){
+  // 담임이면 본인 반만, 업무담당이면 전체 (+ 학급필터 + 이름검색)
+  let list=allStudents;
+  if(currentTeacherRole==='homeroom'&&currentTeacherClass){
+    list=allStudents.filter(s=>s.class===currentTeacherClass);
+  }
+  if(filterMode!=='all')list=list.filter(s=>s.type===filterMode);
+  // 업무담당 전용 필터
+  if(currentTeacherRole==='admin'){
+    const cls=(document.getElementById('classFilter')?.value||'').trim();
+    const q=(document.getElementById('nameSearch')?.value||'').trim();
+    if(cls)list=list.filter(s=>s.class===cls);
+    if(q)list=list.filter(s=>(s.name||'').includes(q));
+  }
+  return list;
+}
+
+function populateClassFilter(){
+  const sel=document.getElementById('classFilter');
+  if(!sel)return;
+  const classes=[...new Set(allStudents.map(s=>s.class||'').filter(Boolean))].sort((a,b)=>a.localeCompare(b,'ko'));
+  const cur=sel.value;
+  sel.innerHTML='<option value="">전체 학급</option>'+classes.map(c=>`<option value="${c}"${c===cur?' selected':''}>${c}</option>`).join('');
+}
+function filterStudents(mode){
+  filterMode=mode;
+  ['tabAll','tabOnline','tabPaper','tabTeacherOnly'].forEach(id=>document.getElementById(id)?.classList.remove('active'));
+  const idMap={all:'tabAll',online:'tabOnline',paper:'tabPaper',teacherOnly:'tabTeacherOnly'};
+  document.getElementById(idMap[mode])?.classList.add('active');
+  renderStudents();
+}
+
+function showAddStudent(){show('scAddStudent');document.getElementById('addDate').valueAsDate=new Date();}
+
+async function registerStudent(){
+  const name=document.getElementById('addName').value.trim();
+  const cls=document.getElementById('addClass').value.trim();
+  if(!name){alert('이름을 입력해 주세요.');return;}
+  const record={name,class:cls,school:'',gender:document.getElementById('addGender').value,date:document.getElementById('addDate').value,scores:null,type:'teacherOnly',obsScores:null,obsMemo:'',savedAt:Date.now(),schoolCode};
+  if(db){try{const id=`${Date.now()}_${Math.random().toString(36).slice(2,6)}`;await db.doc(schoolKey('students')+'/'+id).set(record);record._id=id;allStudents.push(record);}catch(e){alert('저장 중 오류가 발생했어요.');return;}}
+  alert(`${name} 학생이 등록됐어요!`);
+  showTeacher();
+}
+
+async function showDetail(id){
+  let stu=allStudents.find(s=>s._id===id);
+  if(!stu)return;
+  currentStudent=stu;
+  obsAnswers={...((stu.obsAnswers)||{})};
+  obsMode=16;
+
+  document.getElementById('detName').textContent=[stu.school,stu.class,stu.name].filter(Boolean).join(' · ');
+  document.getElementById('detDate').textContent=stu.date?`검사일: ${stu.date}`:'';
+  buildCompareChart(stu);
+  buildDomainGuides(stu);
+  buildObsDomainGuides(stu);
+  buildObsItems(stu,16);
+  document.getElementById('obsMemo').value=stu.obsMemo||'';
+  document.getElementById('obsTab16').classList.add('active');
+  document.getElementById('obsTab32').classList.remove('active');
+  show('scDetail');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function buildCompareChart(stu){
+  const el=document.getElementById('compareChart');
+  const hasStudentScore=stu.scores&&stu.scores.length===4;
+  if(!hasStudentScore){
+    el.innerHTML='<p style="font-size:.82rem;color:var(--fg3);padding:8px 0">학생 자가보고 결과가 아직 없어요. 아래에서 교사 관찰을 먼저 입력할 수 있어요.</p>';
+    return;
+  }
+  el.innerHTML=DOMAINS.map((d,i)=>{
+    const stuScore=stu.scores[i];
+    const stuPct=(stuScore/40*100).toFixed(0);
+    const hasObs=stu.obsScores!==null&&stu.obsScores!==undefined;
+    const obsScore=hasObs?stu.obsScores[i]:null;
+    const obsMax=stu.obsMode===32?40:20;
+    const obsPct=obsScore!==null?(obsScore/obsMax*100).toFixed(0):0;
+    const obsLine=hasObs?`<div class="cbar-line"><span class="cbar-tag">교사</span><div class="cbar-bg"><div class="cbar-fill" style="width:${obsPct}%;background:${d.color};opacity:.6"></div></div><span class="cbar-val" style="color:${d.color}">${obsScore}</span></div>`
+      :`<div class="cbar-line"><span class="cbar-tag">교사</span><div class="cbar-bg"><div class="cbar-fill" style="width:0%;background:${d.color}"></div></div><span class="cbar-val" style="color:var(--fg3)">-</span></div>`;
+    return `<div class="compare-bar-row"><div class="cbar-label" style="color:${d.color}">${d.name}</div><div class="cbar-track"><div class="cbar-line"><span class="cbar-tag">학생</span><div class="cbar-bg"><div class="cbar-fill" style="width:${stuPct}%;background:${d.color}"></div></div><span class="cbar-val" style="color:${d.color}">${stuScore}</span></div>${obsLine}</div></div>`;
+  }).join('');
+}
+
+function buildGuideHTML(d, i, score, max, label){
+  const lv=levelOf(score, max);
+  const g=DOMAIN_GUIDE[i][lv.tier];
+  const tips=g.tips.map(t=>`<li>${t}</li>`).join('');
+  return `<div class="domain-guide">
+    <div class="dg-header" onclick="toggleGuide(this)">
+      <div class="dg-dot" style="background:${d.color}"></div>
+      <span class="dg-name" style="color:${d.color}">${d.name}</span>
+      <span class="dg-score-badge" style="background:${lv.color}">${lv.label} · ${score}점${label?' ('+label+')':''}</span>
+      <span class="dg-arrow">▼</span>
+    </div>
+    <div class="dg-body">
+      <div class="dg-level-label" style="color:${lv.color}">📌 ${lv.label} 수준 — 현재 모습</div>
+      <p class="dg-desc">${g.desc}</p>
+      <div class="dg-tips">
+        <h4>🎯 지도 방향 및 지원 활동</h4>
+        <ul>${tips}</ul>
+      </div>
+    </div>
+  </div>`;
+}
+
+function buildDomainGuides(stu){
+  const el=document.getElementById('domainGuides');
+  if(!stu.scores||stu.scores.length!==4){el.innerHTML='';return;}
+  el.innerHTML='<h3 style="font-size:.9rem;font-weight:700;color:var(--fg2);margin:20px 0 8px">📝 학생 자기보고 — 도메인별 가이드</h3>'+
+    DOMAINS.map((d,i)=>buildGuideHTML(d,i,stu.scores[i],40,'')).join('');
+}
+
+function buildObsDomainGuides(stu){
+  const el=document.getElementById('obsGuides');
+  if(!stu.obsScores||stu.obsScores.length!==4){el.style.display='none';el.innerHTML='';return;}
+  const max=stu.obsMode===32?40:20;
+  el.style.display='block';
+  el.innerHTML='<h3 style="font-size:.9rem;font-weight:700;color:var(--fg2);margin:20px 0 8px">👁 교사 관찰 — 도메인별 가이드</h3>'+
+    DOMAINS.map((d,i)=>buildGuideHTML(d,i,stu.obsScores[i],max,'교사관찰')).join('');
+}
+
+function toggleGuide(header){
+  const body=header.nextElementSibling;
+  const arrow=header.querySelector('.dg-arrow');
+  const isOpen=body.classList.contains('open');
+  body.classList.toggle('open',!isOpen);
+  arrow.classList.toggle('open',!isOpen);
+}
+
+function switchObsMode(mode){
+  obsMode=mode;
+  document.getElementById('obsTab16').classList.toggle('active',mode===16);
+  document.getElementById('obsTab32').classList.toggle('active',mode===32);
+  buildObsItems(currentStudent,mode);
+}
+
+function buildObsItems(stu,mode){
+  const items=mode===16?OBS16:OBS32;
+  const el=document.getElementById('obsItems');
+  el.innerHTML=DOMAINS.map((d,di)=>{
+    const domItems=items.filter(o=>o.d===di);
+    const rows=domItems.map(o=>{
+      const idx=items.indexOf(o);
+      const existingVal=obsAnswers[`${mode}_${idx}`]||null;
+      const opts=OBS_SCALE.map((lbl,v)=>{
+        const checked=existingVal===v+1?'checked':'';
+        return `<div class="obs-opt"><input type="radio" name="obs${mode}_${idx}" id="obs${mode}_${idx}_${v}" value="${v+1}" onchange="obsAns(${mode},${idx},${v+1})" ${checked}><label for="obs${mode}_${idx}_${v}" style="${checked?`background:${d.color};color:#fff;border-color:transparent`:''}">${lbl}</label></div>`;
+      }).join('');
+      return `<div class="obs-item"><div class="obs-item-text">${o.t}</div><div class="obs-opts">${opts}</div></div>`;
+    }).join('');
+    return `<div class="obs-domain"><div class="obs-domain-name" style="color:${d.color}">▸ ${d.name}</div>${rows}</div>`;
+  }).join('');
+}
+
+function obsAns(mode,idx,val){
+  obsAnswers[`${mode}_${idx}`]=val;
+  const items=mode===16?OBS16:OBS32;
+  const domIdx=items[idx].d;
+  document.querySelectorAll(`input[name="obs${mode}_${idx}"]`).forEach(r=>{
+    r.nextElementSibling.style.background='';r.nextElementSibling.style.color='';r.nextElementSibling.style.borderColor='';
+  });
+  const checked=document.querySelector(`input[name="obs${mode}_${idx}"]:checked`);
+  if(checked){checked.nextElementSibling.style.background=`var(--c${domIdx+1})`;checked.nextElementSibling.style.color='#fff';checked.nextElementSibling.style.borderColor='transparent';}
+}
+
+async function saveObs(){
+  if(!currentStudent)return;
+  const memo=document.getElementById('obsMemo').value;
+  const items=obsMode===16?OBS16:OBS32;
+  const obsScores=DOMAINS.map((_,di)=>{
+    const idxList=items.map((o,i)=>o.d===di?i:-1).filter(i=>i>=0);
+    return idxList.reduce((sum,i)=>sum+(obsAnswers[`${obsMode}_${i}`]||0),0);
+  });
+  const update={obsScores,obsAnswers:{...obsAnswers},obsMemo:memo,obsMode};
+  if(db&&currentStudent._id){try{await db.doc(schoolKey('students')+'/'+currentStudent._id).update(update);}catch(e){}}
+  Object.assign(currentStudent,update);
+  buildCompareChart(currentStudent);
+  buildObsDomainGuides(currentStudent);
+  const idx=allStudents.findIndex(s=>s._id===currentStudent._id);
+  if(idx>=0)Object.assign(allStudents[idx],update);
+  alert('관찰 내용이 저장되었어요! ✓');
+}
+</script>
+
+</body></html>
